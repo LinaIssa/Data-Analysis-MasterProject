@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<!--[if IE 7]>                  <html class="ie7 no-js"  lang="en-US"     <![endif]-->
+<!--[if lte IE 8]>              <html class="ie8 no-js"  lang="en-US"     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en-US">  <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">	
+	<title>Interstellar Medium Platform</title>
+  <link rel='stylesheet' id='ss-theme-styles-css'  href='http://ism.obspm.fr/wp-content/themes/smartstart/style.css?ver=4.0.1' type='text/css' media='all' />
+  <link rel='stylesheet' id='local-css'  href='assets/ism.css' type='text/css' media='all' />
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+
+<body class="home page page-id-8 page-template-default">
+
+<header id="header" class="container clearfix">
+	<div id="bloc-logo">
+  <a href="http://ism.obspm.fr/" id="logo" title="Interstellar Medium Platform">
+    <img src="http://ism.obspm.fr/wp-content/uploads/2012/10/logo-psmi-021.jpg" alt="Interstellar Medium Platform">
+  </a>
+    <div id="site-description"></div>
+  </div>
+    
+    
+<nav id="main-nav">
+  <ul id="menu-menu-principal" class="menu">
+    <li id="menu-item-768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-768">
+      <a href="http://ism.obspm.fr/?page_id=33" data-description="Access to services">Codes &#038; databases</a>
+      <ul class="sub-menu">
+        <li id="menu-item-756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-756"><a href="http://ism.obspm.fr/?page_id=33">The PDR Code</a></li>
+        <li id="menu-item-749" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749"><a href="http://ism.obspm.fr/?page_id=243">STARFORMAT</a></li>
+        <li id="menu-item-753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-753"><a href="http://ism.obspm.fr/?page_id=151">The Shock code</a></li>
+        <li id="menu-item-752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-752"><a href="http://ism.obspm.fr/?page_id=157">The TDR model</a></li>
+      </ul>
+    </li>
+  <li id="menu-item-747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-747"><a href="http://ism.obspm.fr/?page_id=370" data-description="Standards">Technologies</a></li>
+  <li id="menu-item-748" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-748"><a href="http://ism.obspm.fr/?page_id=395" data-description="Credits">Partners</a></li>
+  <li id="menu-item-1112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1112"><a href="http://ism.obspm.fr/?page_id=1070">Registration</a></li>
+  </ul>	
+</nav>
+    
+    <!-- end #main-nav -->
+	
+</header><!-- end #header -->
+
+<section id="content" class="clearfix ">
+	<div class="container">	
+
+    <div id="graph">
+      <div id="graph_control">
+        <div id="interface">
+          <h1>Control panel</h1>
+          <p>
+            <label for="files_list">Data file</label>
+            <select id="files_list">
+            </select>    
+          </p>
+          <p>
+            <label for="species_list">Species</label>
+            <select id="species_list">
+            </select>    
+          </p>
+          <p>
+            <label for="threshold">Threshold : </label><span id="threshold_value_display">10 %</span><br/>
+            <input type="range"  min="0" max="100" step="1" value="10" id="threshold"/><br/>      
+          </p>
+          <p>
+            <button type="button"  id="picture_export" name="picture_export" disabled="disabled">Export as PNG</button>
+          </p>   
+          <p>
+            <button type="button"  id="go_back" name="go_back" disabled="disabled"> &lt; Back</button>
+          </p>
+        </div>    
+        <div id="species_network" ></div>
+        <div id="infos" >    
+            <div id="species_display"></div>  
+            <div id="reaction_display"></div>  
+        </div>
+      </div>
+      <div id="gas_conditions">  
+        <div>
+          <h1>Physical conditions</h1>
+          <p>
+            <label for="av">AV : </label><span id="av_value_display">0</span><br/>
+            <input type="range"  min="0" step="10" value="0" id="av"/><br/>      
+          </p>  
+          <p>
+            <label for="with_gas_conditions">Gas</label>
+            <input type="checkbox"  id="with_gas_conditions" name="with_gas_conditions" checked="checked"/>
+            
+            <label for="with_grain_conditions">Grains</label>
+            <input type="checkbox"  id="with_grain_conditions" name="with_grain_conditions" />
+          </p>      
+        </div>  
+        <div id="gas_conditions_display"></div> 
+        <div id="grain_conditions_display"></div>  
+      </div>
+    </div>
+
+
+	
+	</div><!-- end .container -->
+</section><!-- end #content -->
+		
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/3.11.0/vis.min.js"></script>  
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="assets/graph.js"></script>
+</html>

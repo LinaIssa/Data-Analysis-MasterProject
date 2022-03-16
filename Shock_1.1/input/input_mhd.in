@@ -1,0 +1,84 @@
+!---- input files --------------------------------------------------------------
+example_shock                            ! modele     : output files radix
+species.in                               ! specfile   : species file (species list / enthalpies / initial abundances)
+chemistry.in                             ! chemfile   : chemistry file (reaction list / rates)
+none                                     ! h2exfile   : h2* file (if none, population initialized depending on op_H2_in)
+none                                     ! gridfile   : file containing the grid of position - radiation field
+!---- shock parameters ---------------------------------------------------------
+C                                        ! shock_type : 'C' or 'J', Isoprotonic or isobaric steady state : 'S1' or 'S2', Isoprotonic or isobaric PDR: 'P1' or 'P2', Constant velocity or self-consistent Wind : 'W1' or 'W2'
+3                                        ! Nfluids    : 1, 2 ou 3
+1.00E-00                                 ! Bbeta      : Bfield = Bbeta * sqrt(nH) (micro Gauss)
+1.00E+01                                 ! Vs_km      : shock speed (km/s)
+1.00E+03                                 ! DeltaVmin  : initial Vn - Vi (cm s-1)
+1.00E+04                                 ! nH_init    : initial nH = n(H) + 2.0 n(H2) + n(H+) (cm-3)
+1.00E+01                                 ! Tn         : initial gas temperature (n,i,e) (K)
+3                                        ! op_H2_in   : initial H2 ortho/para ratio (999.9 -> ETL)
+!---- environment --------------------------------------------------------------
+5.00E-17                                 ! Zeta       : cosmic ray ionization rate (s-1)
+1                                        ! F_ISRF     : radiation field spectrum - 1 = Mathis, 2 = Draine
+0.00E+00                                 ! RAD        : radiation field intensity (Habing units)
+1.00E-01                                 ! Av0        : initial extinction (magnitudes)
+0                                        ! F_COUP_RAD : perform a full coupling with radiation field transfer (to compute dissociation rates, desorption, ...) - only if RAD ≠ 0
+0                                        ! F_AV       : integrate Av or not
+0                                        ! F_invAv    : use grain coefficients to compute AV/NH (0) or scale grain coefficient to reproduce inv_Av_fac (1)
+5.34D-22                                 ! inv_Av_fac : AV/NH (Galaxy : 5.34D-22) - only if F_invAv == 1
+1.00E+06                                 ! N_H2_0     : column density of H2 buffer (cm-2)
+1.00E+06                                 ! N_CO_0     : column density of CO buffer (cm-2)
+3.50E+00                                 ! vturb      : turbulent velocity (km s-1, used for Doppler broadening in FGK)
+!---- grain properties ---------------------------------------------------------
+0                                        ! F_TGR      : compute grain temperature (1) or keep it constant (0)
+15                                       ! Tgrains    : initial grain temperature (K)
+1.00E-06                                 ! amin_mrn   : grain MRN minimum radius (in cm)
+3.00E-05                                 ! amax_mrn   : grain MRN maximum radius (in cm)
+3.50E+00                                 ! alph_mrn   : grain MRN index
+2.00E+00                                 ! rho_grc    : grain core volumic mass (g/cm3)
+1.00E+00                                 ! rho_grm    : grain mantle volumic mass (g/cm3)
+!---- excitation & cooling -----------------------------------------------------
+1                                        ! ieqth      : thermal Balance (1 : solved, 0 : fixed T) - only for 'S' or 'P'
+1                                        ! Cool_KN    : Kaufman & Neufeld cooling (1) or analytical formula (0)
+100                                      ! NH2_lev    : number of H2 levels included
+100                                      ! NH2_lines_out : maximum number of H2 lines in output file
+BOTH                                     ! H_H2_flag  : H-H2 collisions : DRF, MM or BOTH !
+1                                        ! iforH2     : Formation on grain model (1, 2, 3, 4)
+2                                        ! ikinH2     : Kinetic energy of H2 newly formed (1, 2)
+0                                        ! pumpH2     : H2 pumping by UV photons taken into account (0, 1)
+50                                       ! NCO_lev    : number of CO levels included for FGK transfer (obsolete)
+!---- numerical parameters -----------------------------------------------------
+0                                        ! integ_type : linear (0) or logarithmic (1)"
+30000                                    ! Nstep_max  : maximum number of integration steps
+9.99E+99                                 ! timeJ      : shock age (years)
+1.00E+06                                 ! duration_max : maximum shock duration (years)
+1.00E-06                                 ! Eps_V      : precision of computation
+1.00E+14                                 ! XLL        : caracteristic viscous length (cm)
+!---- output specifications ----------------------------------------------------
+0                                        ! F_W_HDF5_STD : write HDF5 standard output files
+0                                        ! F_W_HDF5_CHE : write HDF5 chemical output files
+1                                        ! F_W_ASCII  : write ASCII output files
+10000                                    ! Npthdf5    : maximal number of points in HDF5 files
+5                                        ! Nstep_w    : number of steps between 2 outputs (for ascii and chemical HDF5 files)
+FD                                       ! speci_out  : data in mhd_speci.out file - 'AD' (cm-3), 'CD' (cm-2) or 'FD' (n(x)/nH)
+AD                                       ! H2_out     : data in H2_lev.out    file - 'AD' (cm-3), 'CD' (cm-2) or 'ln(N/g)'
+local                                    ! line_out   : data in H2_line.out   file - 'local' (erg/s/cm3) or 'integrated' (erg/s/cm2/sr)
+N                                        ! flag_analysis : Output chemical analysis (dominant reactions) (Y/N)
+!---- developer options --------------------------------------------------------
+1                                        ! F_SORT     : sort reactions in increasing order before computing derivatives
+2                                        ! F_CONS     : test for conservation laws and apply correction. (0) none, (1) only H2 and charge, (2) H2, charge, PAHs and all elements
+0                                        ! F_CH       : compute CH velocity (1) or adopt neutral velocity (0)
+0                                        ! F_S        : compute S  velocity (1) or adopt neutral velocity (0)
+0                                        ! F_SH       : compute SH velocity (1) or adopt neutral velocity (0)
+0.00E+00                                 ! z0         : distance to the origin of the mass flow (used only for shock_type='W')
+
+!===============================================================================
+! additional parameter description
+!===============================================================================
+iforH2 = 1                               ! Flag : H2 formation on grains
+                                         !  -1: formation in the v,J = 0,0 and 0,1 levels only
+                                         !   0: 1/3 of 4.4781 eV in internal energy (=> 17249 K) (Allen, 1999)
+                                         !   1: Proportional to Boltzman Distrib at 17249 K
+                                         !   2: Dissociation limit : v = 14, J = 0,1 (4.4781 eV)
+                                         !   3: v = 6, J = 0,1
+                                         !   4: fraction = relative populations at t, initialised as H2_lev%density
+                                         !                 and changed during integration
+ikinH2 = 2                               ! Flag : H2 formation energy released as kinetic energy
+                                         !   1: 0.5 * (4.4781 - internal)
+                                         !   2: Inf(1.4927 eV, 4.4781 - internal)

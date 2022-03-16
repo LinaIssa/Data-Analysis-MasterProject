@@ -1,0 +1,28 @@
+# SO cross sections - reduced to    18points
+# From the Leiden database for photodissociation and photoionization of astrophysically relevant molecules, http://home.strw.leidenuniv.nl/~ewine/photo/                                                                                                                                                                                                                                                                                                                                                            
+# File last modified by Alan Heays 2017-03-01                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+# references: phillips1981 10.1021/j150626a009, nee1986b 10.1063/1.449940, norwood1989 10.1016/S0009-2614(89)87110-6,                                                                                                                                                                                                                                                                                                                                                                                               
+# no info on lines                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+# wavelength: (nm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+# photoabsorption   -- Photoabsorption cross section (cm2)                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+# photoionisation   -- Photoionisation cross section (cm2)                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+# This version has been resampled to a uniform 0.1nm grid while maintaining a constant integrated cross section (using trapezoidal integration).                                                                                                                                                                                                                                                                                                                                                                    
+# wavelength photoabsorption photoionisation                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+1.034670E+02 4.239931E-17 4.239931E-17
+1.044670E+02 4.697026E-17 4.697026E-17
+1.054670E+02 4.885568E-17 4.885568E-17
+1.064670E+02 3.734979E-17 3.734979E-17
+1.074670E+02 2.246246E-17 2.246246E-17
+1.084670E+02 2.948922E-17 2.948922E-17
+1.094670E+02 2.823230E-17 2.823230E-17
+1.104670E+02 2.426638E-17 2.426638E-17
+1.114670E+02 1.825797E-17 1.825797E-17
+1.124670E+02 1.152493E-17 1.152493E-17
+1.134670E+02 8.875049E-18 8.875049E-18
+1.144670E+02 6.557675E-18 6.557675E-18
+1.154670E+02 6.646447E-18 6.646447E-18
+1.164670E+02 9.467668E-17 4.596666E-18
+1.174670E+02 1.054086E-16 4.736090E-18
+1.184670E+02 1.045372E-16 3.226550E-18
+1.194670E+02 1.093693E-16 1.926031E-18
+1.204670E+02 1.406249E-16 1.559266E-18

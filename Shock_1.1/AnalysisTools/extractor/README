@@ -1,0 +1,81 @@
+==========================================================================================
+This is the source code of the Extractor
+Updated : 2016/04/02
+==========================================================================================
+
+==========================================================================================
+1 - Introduction
+==========================================================================================
+Quantities computed by the PDR code are stored in HDF5 files. 
+The Extractor software aims at opening these HDF5 files and at extracting data in 
+ASCII format.
+
+The HDF5 files are stored in the out directory of the PDR code. They are identified with 
+the extension: _s_XX.hdf5 where XX the index of the global iteration. 
+
+The Extractor tool can be used:
+* through an graphical interface
+* in command line.
+
+We recommend to use the graphical interface for the first tries but to use it in command 
+line when extractions must be done on several output files of the PDR code.
+
+==========================================================================================
+II. Requirements
+==========================================================================================
+Python 2.7.x
+
+Required libraries : 
+  h5py
+  numpy 
+  PyQt4    
+  
+Installation on mint(17)/ubuntu(14.04)/debian(wheezy) linux distributions :
+  apt-get install python-h5py
+  apt-get install python-numpy
+  apt-get instlal python-qwt5-qt4
+
+==========================================================================================
+3 - Usage
+==========================================================================================
+
+------------------------------------------------------------------------------------------
+3.1 - Get help
+------------------------------------------------------------------------------------------
+
+  python ./extractor.py --help
+
+------------------------------------------------------------------------------------------
+3.2 - Graphical user interface 
+------------------------------------------------------------------------------------------
+
+  python ./extractor.py 
+
+------------------------------------------------------------------------------------------
+3.3. Command line interface
+------------------------------------------------------------------------------------------
+
+In command line mode, the Extractor extracts quantities which names are provided in 
+a ASCII file. This ASCII file must have the extension .esf and is usually located in the
+"scripts" directory. 
+
+These ASCII files can be produced by the graphical interface. So:
+1 - run the Extractor in graphical interface mode
+2 - select the quantities to extract
+3 - save these quantities in a .esf file
+
+To use the extractor in command line mode:
+      python ./extractor.py -f /mydir/data.hdf5  -t ~/template.esf -o result.txt
+with:
+-f  : path towards the HDF5 files
+-t  : path towards the ASCII file with the list of quantities to extract
+-o  : path and name of the ASCII output file to produce.
+
+==========================================================================================
+4 - List of all command line options
+==========================================================================================
+    -h, --help : display this help
+    -f, --file : HDF5 file to read
+    -t, --template : script to apply (.esf file)
+    -o, --output : name of output file
+    -s, --separator : separator between columns, default is ,

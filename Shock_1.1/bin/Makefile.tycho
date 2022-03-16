@@ -1,0 +1,67 @@
+# compilo='intel'
+compilo='gfortran'
+# compilo='pgf90'
+
+# Intel fortran
+ifeq ($(compilo), 'intel')
+ FC = ifort
+ DEBUG= #  -g  -traceback -check bounds#-g # -s
+ FFLAGS =  -fpe0 -r8 -O2  #$(DEBUG)
+endif
+# gfortran
+ifeq ($(compilo), 'gfortran')
+FC=gfortran
+DEBUG= -g -C -fbacktrace 
+#-fcheck=bounds
+FFLAGS= -O2  -fdefault-double-8 -fdefault-real-8 -finit-real=nan -ffpe-trap=invalid,zero,overflow
+endif
+# pgf90
+ifeq ($(compilo), 'pgf90')
+FC=pgf90
+DEBUG= -g -C -Miomutex -Minform,inform 
+FFLAGS= -r8 -O2
+endif
+
+OBJ =\
+      techconfig.o \
+      numerical_recipes.o \
+      tools.o \
+      constants.o \
+      var_VODE.o \
+      variables_mhd.o \
+      read_fe_data.o \
+      chemical_species.o \
+      chemical_reactions.o \
+      heating_rates.o \
+      molecular_cooling.o \
+      H2.o \
+      SiO.o \
+      line_excit.o \
+      evolution.o \
+      integrateur_vode.o \
+      energetics.o \
+      profil_tables.o \
+      initialize.o \
+      outputs.o \
+      outputs_hdf5.o \
+      mhd_vode.o
+
+# Executable
+
+# -- 2017.03.02 on tycho use the system libraries
+mhd_vode: $(OBJ) 
+	$(FC) $(FFLAGS) $(DEBUG) $(OBJ) -o ../mhd_vode -llapack -lblas
+
+
+# Standard conversion rule
+%.o:../src/%.f90
+	$(FC) $(FFLAGS) $(DEBUG) -c $^ -o $@
+
+%.o:../src/%.f
+	$(FC) $(FFLAGS) $(DEBUG) -c $^ -o $@
+
+clean:
+	rm -f *.o *.mod ../mhd_vode
+
+cleanall:
+	make clean ; cd $(MATH) ; make clean

@@ -1,0 +1,64 @@
+==========================================================================================
+Chemistry Analyser tool
+Date:    28 November 2016
+
+Note: The full documentation is in the file Doc_ChemistryAnalyser.pdf
+==========================================================================================
+
+
+==========================================================================================
+I. Introduction
+==========================================================================================
+
+This software aims at analyzing the chemistry of the Meudon PDR code.
+
+==========================================================================================
+II. Requirements
+==========================================================================================
+
+Python 2.7.x
+
+Required libraries : 
+  h5py
+  numpy 
+
+This application embeds bottle 0.12.9 to provides a local http server
+  
+Installation on mint(17)/ubuntu(14.04)/debian(wheezy) linux distributions :
+  apt-get install python-h5py
+  apt-get install python-numpy
+  
+==========================================================================================
+III. Directories
+==========================================================================================
+
+  server : server scripts
+  visualizer : visualization web application
+  data : contains user's hdf files 
+  save : contains data saved by user from web application
+  test : scripts testing the server
+
+==========================================================================================
+IV. Usage
+==========================================================================================
+
+1. Put the hdf5 file to study in the "data" directory
+
+  the hdf5 files containing all the information necessary to analyze
+  the chemistry are labelled with '_c_'
+  e.g. "test_c_10.hdf5"
+
+2. Go in the "server" directory and launch the server in command line
+
+  python server.py 
+
+3. Go in the "visualizer" directory and open "index.html" with the web
+   browser of your choosing (e.g. Google Chrome, Safari, Firefox)
+   
+V. Running tests
+
+1. Go in test directory and laucnh the run.py script
+  python ./run.py
+
+Results will directly be displayed in the console
+

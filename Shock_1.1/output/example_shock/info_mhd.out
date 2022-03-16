@@ -1,0 +1,1629 @@
+date :  6/10/2020     time : 23 H 16 min
+
+input files
+          modele           :example_shock                                                                                       
+          specfile         :species.in                                                                                          
+          chemfile         :chemistry.in                                                                                        
+          h2exfile         :none                                                                                                
+          gridfile         :none                                                                                                
+
+shock parameters
+          shock type       :C 
+          Nfluids          :        3
+          B (micro Gauss)  : 1.00E+02
+          Vs (km.s-1)      :     10.0
+          Dv (km.s-1)      :   1000.0
+          nH (cm-3)        : 1.00E+04
+          Tn (K)           :     19.2
+          o/p H2           : 3.00E+00
+
+environmental parameters
+          Zeta (s-1)       : 5.00E-17
+          ISRF             :        1
+          RAD              :     0.00
+          Av (mag)         :     0.10
+          F_COUP_RAD       :        0
+          F_AV             :        0
+          F_invAv          :        0
+          Av conv factor   :     0.00
+          N_H2_0 (cm-2)    :1.000E+06
+          N_CO_0 (cm-2)    :1.000E+06
+          vturb            :3.500E+05
+
+grains parameters
+          F_TGR            :        0
+          Tgrains          : 1.50E+01
+          amin_mrn         : 1.00E-06
+          amax_mrn         : 3.00E-05
+          alph_mrn         : 3.50E+00
+          rho_grc          : 2.00E+00
+          rho_grm          : 1.00E+00
+
+excitation & cooling
+          ieqth            :        1
+          Cool_KN          :        1
+          NH2_lev          :      100
+          NH2_lines        :      100
+          H_H2_flag        :BOTH
+          iforH2           :        1
+          ikinH2           :        2
+          pumpH2           :        0
+          NCO_lev          :       50
+
+integration parameters
+          Nstep_max        :    30000
+          timeJ            : 9.99E+99
+          duration_max     : 1.00E+06
+          XLL              : 1.00E+10
+
+DVODE parameters 
+          Eps_V            : 1.00E-06
+          T0_V             : 0.00E+00
+          H0_V             : 1.00E+05
+          Tout_V           : 1.00E+05
+          MF_V             :       22
+          Itask_V          :        1
+          Istate_V         :        1
+          Hdone            : 0.00E+00
+          Hnext            : 0.00E+00
+
+outputs parameters
+          F_W_HDF5_STD     :        0
+          F_W_HDF5_CHE     :        0
+          F_W_ASCII        :        1
+          Npthdf5          :    10000
+          Nstep_w          :        5
+          speci_out        :FD
+          H2_out           :AD     
+          line_out         :local     
+          flag_analysis    :N
+
+H2 molecule 
+          number of levels :     100
+          E(v= 4,J=12) (K) : 31466.5  (last level)
+          Vmax             :      14
+          Jmax             :      29
+          H-H2 collisions  : BOTH
+          iforH2           :       1
+          ikinH2           :       2
+          H2_int_E         :  1.74E+04 K
+
+elemental abundances (gas + mantles + PAH)
+          H       : 1.00E+00   (ref : 1.00E+00)
+          D       : 0.00E+00   (ref : 2.00E-05)
+          He      : 1.00E-01   (ref : 1.00E-01)
+          C       : 3.55E-04   (ref : 3.62E-04)
+          N       : 7.94E-05   (ref : 1.12E-04)
+          O       : 4.42E-04   (ref : 8.53E-04)
+          Na      : 0.00E+00   (ref : 2.06E-06)
+          Mg      : 3.70E-05   (ref : 3.85E-05)
+          Si      : 3.67E-05   (ref : 3.58E-05)
+          S       : 1.86E-05   (ref : 1.85E-05)
+          Fe      : 3.23E-05   (ref : 3.23E-05)
+          G       : 6.94E-11   (ref : 1.00E-10)
+ ---- elements distribution ----
+ element       Xtot         gas          PAH              Mantles      Cores 
+H             1.000E+00    1.000E+00    1.800E-05    2.300E-19    0.000E+00
+D             0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+He            1.000E-01    1.000E-01    0.000E+00    0.000E+00    0.000E+00
+C             3.549E-04    1.380E-04    5.400E-05    7.000E-20    1.629E-04
+N             7.940E-05    7.940E-05    0.000E+00    1.000E-20    0.000E+00
+O             4.419E-04    3.020E-04    0.000E+00    1.400E-19    1.399E-04
+Na            0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+Mg            3.700E-05    2.000E-20    0.000E+00    0.000E+00    3.700E-05
+Si            3.670E-05    3.000E-06    0.000E+00    3.000E-20    3.370E-05
+S             1.860E-05    1.860E-05    0.000E+00    2.000E-20    0.000E+00
+Fe            3.231E-05    1.500E-08    0.000E+00    1.000E-20    3.230E-05
+G             6.944E-11    6.944E-11    0.000E+00    0.000E+00    0.000E+00
+
+energetics
+          mass flux (g/s/cm2)     : 2.35E-14
+          momentum flux (erg/cm3) : 2.40E-08
+          energy flux (erg/s/cm2) : 1.26E-02
+
+--------------------------------------------------------------------------------
+-- 141 chemical species (+5 added)                                            --
+-- incl. 51 neutrals, 15 on grains, 66 ions >0,  4 ions <0                    --
+-- name, composition, enthalpy(kCal/mol, -99.999=unknown), Density (cm-3)     --
+--------------------------------------------------------------------------------
+  1  H         1 00000000000 4.000E-01    51.634 1
+  2  H2        2 00000000000 3.000E-01     0.000 1
+  3  He        0 00010000000 1.000E-01     0.000 1
+  4  C         0 10000000000 1.000E-20   169.980 1
+  5  CH        1 10000000000 1.000E-20   141.600 1
+  6  CH2       2 10000000000 1.000E-20    93.900 1
+  7  CH3       3 10000000000 1.000E-20    34.800 1
+  8  CH4       4 10000000000 1.000E-20   -15.970 1
+  9  O         0 00100000000 3.020E-04    58.980 1
+ 10  O2        0 00200000000 1.000E-20     0.000 1
+ 11  OH        1 00100000000 1.000E-20     9.250 1
+ 12  H2O       2 00100000000 1.000E-20   -57.100 1
+ 13  CO        0 10100000000 1.000E-20   -27.200 1
+ 14  HCO       1 10100000000 1.000E-20   -99.999 1
+ 15  CO2       0 10200000000 1.000E-20   -93.965 1
+ 16  C2        0 20000000000 1.000E-20   198.200 1
+ 17  C2H       1 20000000000 1.000E-20   113.300 1
+ 18  C2H2      2 20000000000 1.000E-20    56.320 1
+ 19  C3        0 30000000000 1.000E-20   194.000 1
+ 20  C3H       1 30000000000 1.000E-20   177.000 1
+ 21  C3H2      2 30000000000 1.000E-20   114.000 1
+ 22  CH3OH     4 10100000000 1.000E-20   -99.999 1
+ 23  H2CO      2 10100000000 1.000E-20   -99.999 1
+ 24  HCO2H     2 10200000000 1.000E-20   -99.999 1
+ 25  N         0 01000000000 7.940E-05   112.530 1
+ 26  NH        1 01000000000 1.000E-20    90.000 1
+ 27  NH2       2 01000000000 1.000E-20    46.200 1
+ 28  NH3       3 01000000000 1.000E-20    -9.299 1
+ 29  CN        0 11000000000 1.000E-20   103.200 1
+ 30  HCN       1 11000000000 1.000E-20    32.390 1
+ 31  HNC       1 11000000000 1.000E-20    48.000 1
+ 32  N2        0 02000000000 1.000E-20     0.000 1
+ 33  NO        0 01100000000 1.000E-20    21.460 1
+ 34  S         0 00000010000 1.000E-20    65.600 1
+ 35  SH        1 00000010000 1.000E-20    32.600 1
+ 36  H2S       2 00000010000 1.000E-20    -4.230 1
+ 37  CS        0 10000010000 1.000E-20    63.000 1
+ 38  SO        0 00100010000 1.000E-20     1.200 1
+ 39  SO2       0 00200010000 1.000E-20   -70.300 1
+ 40  OCS       0 10100010000 1.000E-20   -34.000 1
+ 41  Si        0 00000001000 1.000E-20   106.700 1
+ 42  SiH       1 00000001000 1.000E-20    89.690 1
+ 43  SiH2      2 00000001000 1.000E-20    69.140 1
+ 44  SiH3      3 00000001000 1.000E-20    48.540 1
+ 45  SiH4      4 00000001000 1.000E-20    11.000 1
+ 46  SiO       0 00100001000 1.000E-20   -24.300 1
+ 47  SiO2      0 00200001000 1.000E-20   -73.000 1
+ 48  Mg        0 00000100000 1.000E-20    35.000 1
+ 49  Fe        0 00000000010 1.000E-20    98.700 1
+ 50  C54H18   18540000000000 1.000E-06   -99.999 1
+ 51  G         0600000000000 6.944E-11   -99.999 1
+ 52  H2O*      2 00100000001 1.000E-20     0.000 1
+ 53  O2*       0 00200000001 1.000E-20     0.000 1
+ 54  CO*       0 10100000001 1.000E-20     0.000 1
+ 55  CO2*      0 10200000001 1.000E-20     0.000 1
+ 56  CH4*      4 10000000001 1.000E-20     0.000 1
+ 57  NH3*      3 01000000001 1.000E-20     0.000 1
+ 58  CH3OH*    4 10100000001 1.000E-20     0.000 1
+ 59  H2CO*     2 10100000001 1.000E-20     0.000 1
+ 60  HCO2H*    2 10200000001 1.000E-20     0.000 1
+ 61  OCS*      0 10100010001 1.000E-20     0.000 1
+ 62  H2S*      2 00000010001 1.000E-20     0.000 1
+ 63  SiH4*     4 00000001001 1.000E-20     0.000 1
+ 64  SiO*      0 00100001001 1.000E-20     0.000 1
+ 65  SiO2*     0 00200001001 1.000E-20     0.000 1
+ 66  Fe*       0 00000000010 1.000E-20     0.000 1
+ 67  O**       0 00100000002 1.399E-04     0.000 1
+ 68  Si**      0 00000001002 3.370E-05     0.000 1
+ 69  Mg**      0 00000100002 3.700E-05     0.000 1
+ 70  Fe**      0 00000000012 3.230E-05     0.000 1
+ 71  C**       0 10000000002 1.629E-04     0.000 1
+ 72  H+        1 00001000000 1.000E-20   365.200 1
+ 73  H2+       2 00001000000 1.000E-20   355.700 1
+ 74  H3+       3 00001000000 1.000E-20   265.000 1
+ 75  He+       0 00011000000 1.000E-20   567.000 1
+ 76  C+        0 10001000000 1.380E-04   429.700 1
+ 77  CH+       1 10001000000 1.000E-20   387.000 1
+ 78  CH2+      2 10001000000 1.000E-20   331.000 1
+ 79  CH3+      3 10001000000 1.000E-20   262.000 1
+ 80  CH4+      4 10001000000 1.000E-20   272.000 1
+ 81  CH5+      5 10001000000 1.000E-20   216.000 1
+ 82  O+        0 00101000000 1.000E-20   373.000 1
+ 83  O2+       0 00201000000 1.000E-20   278.400 1
+ 84  OH+       1 00101000000 1.000E-20   309.310 1
+ 85  H2O+      2 00101000000 1.000E-20   233.700 1
+ 86  H3O+      3 00101000000 1.000E-20   143.000 1
+ 87  CO+       0 10101000000 1.000E-20   295.970 1
+ 88  HCO+      1 10101000000 1.000E-20   197.300 1
+ 89  H2CO+     2 10101000000 1.000E-20   -99.999 1
+ 90  H3CO+     3 10101000000 1.000E-20   -99.999 1
+ 91  CH3OH+    4 10101000000 1.000E-20   -99.999 1
+ 92  CH5O+     5 10101000000 1.000E-20   -99.999 1
+ 93  HCO2+     1 10201000000 1.000E-20   141.000 1
+ 94  C2+       0 20001000000 1.000E-20   476.000 1
+ 95  C2H+      1 20001000000 1.000E-20   404.000 1
+ 96  C2H2+     2 20001000000 1.000E-20   317.500 1
+ 97  C2H3+     3 20001000000 1.000E-20   267.900 1
+ 98  C3+       0 30001000000 1.000E-20   479.000 1
+ 99  C3H+      1 30001000000 1.000E-20   381.000 1
+100  C3H2+     2 30001000000 1.000E-20   330.000 1
+101  C3H3+     3 30001000000 1.000E-20   282.000 1
+102  N+        0 01001000000 1.000E-20   447.690 1
+103  NH+       1 01001000000 1.000E-20   401.100 1
+104  NH2+      2 01001000000 1.000E-20   302.700 1
+105  NH3+      3 01001000000 1.000E-20   224.900 1
+106  NH4+      4 01001000000 1.000E-20   151.000 1
+107  CN+       0 11001000000 1.000E-20   429.300 1
+108  C2N+      0 21001000000 1.000E-20   410.000 1
+109  HCN+      1 11001000000 1.000E-20   346.000 1
+110  H2CN+     2 11001000000 1.000E-20   226.000 1
+111  H2NC+     2 11001000000 1.000E-20   265.000 1
+112  N2+       0 02001000000 1.000E-20   359.298 1
+113  N2H+      1 02001000000 1.000E-20   247.500 1
+114  NO+       0 01101000000 1.000E-20   235.330 1
+115  HNO+      1 01101000000 1.000E-20   256.800 1
+116  S+        0 00001010000 1.860E-05   304.000 1
+117  SH+       1 00001010000 1.000E-20   271.800 1
+118  H2S+      2 00001010000 1.000E-20   237.000 1
+119  H3S+      3 00001010000 1.000E-20   190.000 1
+120  CS+       0 10001010000 1.000E-20   324.000 1
+121  HCS+      1 10001010000 1.000E-20   243.000 1
+122  SO+       0 00101010000 1.000E-20   239.200 1
+123  HSO+      1 00101010000 1.000E-20   210.000 1
+124  HSO2+     1 00201010000 1.000E-20   143.000 1
+125  HOCS+     1 10101010000 1.000E-20   181.000 1
+126  Si+       0 00001001000 3.000E-06   295.000 1
+127  SiH+      1 00001001000 1.000E-20   271.820 1
+128  SiH2+     2 00001001000 1.000E-20   276.360 1
+129  SiH3+     3 00001001000 1.000E-20   237.320 1
+130  SiH4+     4 00001001000 1.000E-20   279.900 1
+131  SiH5+     5 00001001000 1.000E-20   219.380 1
+132  SiO+      0 00101001000 1.000E-20   239.520 1
+133  SiOH+     1 00101001000 1.000E-20   -99.999 1
+134  Fe+       0 00001000010 1.500E-08   280.240 1
+135  C54H18+  18540001000000 1.000E-20   -99.999 1
+136  G+        0600001000000 1.500E-20   -99.999 1
+137  Mg+       0 00000000000 1.000E-20   211.000 1
+138  C54H18-  18540000000100 1.000E-20   -99.999 1
+139  G-        0600000000100 1.500E-20   -99.999 1
+140  H-        1 00000000100 1.000E-20    34.000 1
+141  ELECTR    0 0**00000000 1.596E-04     0.000 1
+142  GRAIN  
+143  PHOTON 
+144  CRP    
+145  SECPHO 
+146  VOISIN 
+
+--------------------------------------------------------------------------------
+--- 1348 chemical reactions                                                  ---
+--- incl. 135 PHOTO,  85 CR_IO,  15 CR_DE,   1 H2_FO,   0 THREE,  39 SPUTT   ---
+---        40 EROSI,  45 ADSOR,  16 DISSO, 754 OTHER, and 116 REVER          ---
+--- R1 + R2 = P1 + P2 + P3 + P4, gamma (cm3.s-1), alpha, beta (K), DE (eV)   ---
+--------------------------------------------------------------------------------
+D&B   H2      PHOTON  H       H                      2.54E-11  0.00      0.0    21                   0.00
+lee   CO      PHOTON  C       O                      1.03E-10  0.00      0.0    21                   0.00
+HEA17 H       PHOTON  H+      ELECTR                 0.00E+00  0.00      0.0    20   H_pi.txt        0.00
+HEA17 C       PHOTON  C+      ELECTR                 2.60E-10  0.00      3.8    22   C_pi_old.txt    0.00
+HEA17 CH      PHOTON  C       H                      6.40E-10  0.00      2.1    22   CH_pd.txt       0.00
+HEA17 CH      PHOTON  CH+     ELECTR                 5.60E-10  0.00      3.7    22   CH_pi_old.txt   0.00
+HEA17 CH2     PHOTON  C       H2                     3.90E-10  0.00      3.4    20   CH2_pd.txt      0.00
+36b77 CH2     PHOTON  CH2+    ELECTR                 3.00E-10  0.00      2.3    20                   0.00
+HEA17 CH3     PHOTON  CH      H2                     4.00E-10  0.00      2.5    20   CH3_pd.txt      0.00
+HEA17 CH3     PHOTON  CH3+    ELECTR                 2.30E-10  0.00      3.3    20   CH3_pi.txt      0.00
+HEA17 CH4     PHOTON  CH3     H                      1.10E-09  0.00      3.1    20   CH4_pd.txt      0.00
+HEA17 CH4     PHOTON  CH4+    ELECTR                 1.20E-11  0.00      4.3    20   CH4_pi.txt      0.00
+HEA17 O       PHOTON  O+      ELECTR                 0.00E+00  0.00      0.0    20   O_pi.txt        0.00
+HEA17 OH      PHOTON  O       H                      2.50E-10  0.00      2.7    22   OH_pd_old.txt   0.00
+p & h OH      PHOTON  OH+     ELECTR                 1.60E-12  0.00      3.1    22   OH_pi_old.txt   0.00
+HEA17 H2O     PHOTON  OH      H                      3.98E-10  0.00      2.6    22   H2O_pd_old.txt  0.00
+HEA17 H2O     PHOTON  O       H2                     1.32E-10  0.00      2.6    20   H2O_pd.txt      0.00
+HEA17 H2O     PHOTON  H2O+    ELECTR                 2.60E-11  0.00      4.3    22   H2O_pi_old.txt  0.00
+HEA17 O2      PHOTON  O       O                      5.00E-10  0.00      2.5    20   O2_pd.txt       0.00
+HEA17 O2      PHOTON  O2+     ELECTR                 4.50E-11  0.00      4.2    20   O2_pi.txt       0.00
+HEA17 CO2     PHOTON  CO      O                      6.80E-10  0.00      3.4    20   CO2_pd.txt      0.00
+HEA17 C2      PHOTON  C       C                      1.70E-10  0.00      3.0    22   C2_pd.txt       0.00
+HEA17 C2      PHOTON  C2+     ELECTR                 3.40E-11  0.00      4.2    22   C2_pi_old.txt   0.00
+HEA17 C2H     PHOTON  C2      H                      1.00E-09  0.00      2.7    20   C2H_pd.txt      0.00
+h+l89 C2H     PHOTON  C2H+    ELECTR                 1.00E-11  0.00      2.0    20                   0.00
+HEA17 C2H2    PHOTON  C2H     H                      1.60E-09  0.00      2.6    20   C2H2_pd.txt     0.00
+HEA17 C2H2    PHOTON  C2H2+   ELECTR                 4.10E-10  0.00      3.9    20   C2H2_pi.txt     0.00
+HEA17 C3      PHOTON  C2      C                      3.20E-09  0.00      2.4    22   C3_pd_old.txt   0.00
+HEA17 C3      PHOTON  C3+     ELECTR                 1.10E-10  0.00      4.0    20   C3_pi.txt       0.00
+HEA17 C3H     PHOTON  C3      H                      1.20E-09  0.00      2.1    20   l-C3H_pd.txt    0.00
+HEA17 C3H2    PHOTON  C3H     H                      2.70E-09  0.00      2.5    20   l-C3H2_pd.txt   0.00
+HEA17 CH3OH   PHOTON  CH3     OH                     9.50E-10  0.00      2.8    20   CH3OH_pd.txt    0.00
+HEA17 CH3OH   PHOTON  CH3OH+  ELECTR                 2.50E-10  0.00      3.8    20   CH3OH_pi.txt    0.00
+HEA17 HCO     PHOTON  CO      H                      4.90E-10  0.00      2.4    20   HCO_pd.txt      0.00
+HEA17 H2CO    PHOTON  CO      H2                     9.60E-10  0.00      2.5    20   H2CO_pd.txt     0.00
+HEA17 H2CO    PHOTON  H2CO+   ELECTR                 3.10E-10  0.00      3.7    20   H2CO_pi.txt     0.00
+HEA17 N       PHOTON  N+      ELECTR                 0.00E+00  0.00      0.0    20   N_pi.txt        0.00
+HEA17 NH      PHOTON  N       H                      3.80E-10  0.00      2.6    22   NH_pd_old.txt   0.00
+HEA17 NH      PHOTON  NH+     ELECTR                 3.00E-12  0.00      4.3    20   NH_pi.txt       0.00
+HEA17 NH2     PHOTON  NH      H                      6.30E-10  0.00      2.3    20   NH2_pd.txt      0.00
+HEA17 NH2     PHOTON  NH2+    ELECTR                 1.50E-10  0.00      4.0    20   NH2_pi.txt      0.00
+HEA17 NH3     PHOTON  NH2     H                      5.60E-10  0.00      2.6    20   NH3_pd.txt      0.00
+HEA17 NH3     PHOTON  NH      H2                     4.30E-10  0.00      2.6    20   NH3_pd.txt      0.00
+HEA17 NH3     PHOTON  NH3+    ELECTR                 2.00E-10  0.00      3.5    20   NH3_pi.txt      0.00
+HEA17 CN      PHOTON  C       N                      4.30E-10  0.00      3.5    22   CN_pd_old.txt   0.00
+HEA17 HCN     PHOTON  CN      H                      1.20E-09  0.00      3.1    20   HCN_pd.txt      0.00
+HEA17 HCN     PHOTON  HCN+    ELECTR                 7.00E-13  0.00      4.3    20   HCN_pi.txt      0.00
+HEA17 HNC     PHOTON  CN      H                      1.20E-09  0.00      3.1    20   HNC_pd.txt      0.00
+HEA17 N2      PHOTON  N       N                      1.50E-10  0.00      4.2    20   N2_pd.txt       0.00
+HEA17 NO      PHOTON  N       O                      2.70E-10  0.00      2.6    20   NO_pd.txt       0.00
+HEA17 NO      PHOTON  NO+     ELECTR                 1.90E-10  0.00      3.4    20   NO_pi.txt       0.00
+HEA17 S       PHOTON  S+      ELECTR                 8.50E-10  0.00      3.5    22   S_pi_old.txt    0.00
+HEA17 SH      PHOTON  S       H                      8.10E-10  0.00      2.4    20   SH_pd.txt       0.00
+HEA17 SH      PHOTON  SH+     ELECTR                 3.70E-11  0.00      3.9    20   SH_pi.txt       0.00
+HEA17 H2S     PHOTON  SH      H                      2.10E-09  0.00      2.6    20   H2S_pd.txt      0.00
+HEA17 H2S     PHOTON  H2S+    ELECTR                 5.90E-10  0.00      3.5    20   H2S_pi.txt      0.00
+HEA17 CS      PHOTON  C       S                      6.30E-10  0.00      2.8    20   CS_pd.txt       0.00
+HEA17 CS      PHOTON  CS+     ELECTR                 1.80E-11  0.00      3.6    20   CS_pi.txt       0.00
+HEA17 SO      PHOTON  S       O                      2.90E-09  0.00      2.8    20   SO_pd.txt       0.00
+HEA17 SO      PHOTON  SO+     ELECTR                 3.70E-10  0.00      3.5    20   SO_pi.txt       0.00
+HEA17 SO2     PHOTON  SO      O                      1.70E-09  0.00      2.8    20   SO2_pd.txt      0.00
+HEA17 OCS     PHOTON  S       CO                     3.10E-09  0.00      2.5    20   OCS_pd.txt      0.00
+HEA17 Si      PHOTON  Si+     ELECTR                 2.90E-09  0.00      2.6    20   Si_pi.txt       0.00
+HEA17 SiH     PHOTON  Si      H                      1.80E-09  0.00      1.9    20   SiH_pd.txt      0.00
+Guess SiH2    PHOTON  SiH     H                      1.80E-09  0.00      1.9    20                   0.00
+Guess SiH3    PHOTON  SiH2    H                      1.80E-09  0.00      1.9    20                   0.00
+Guess SiH4    PHOTON  SiH2    H2                     1.80E-09  0.00      1.9    20                   0.00
+HEA17 SiO     PHOTON  Si      O                      1.00E-09  0.00      2.7    20   SiO_pd.txt      0.00
+St&Da SiO     PHOTON  SiO+    ELECTR                 5.00E-11  0.00      2.5    20                   0.00
+St&Da SiO2    PHOTON  SiO     O                      2.00E-10  0.00      2.5    20                   0.00
+HEA17 Fe      PHOTON  Fe+     ELECTR                 3.10E-10  0.00      2.6    20   Fe_pi.txt       0.00
+HEA17 H2+     PHOTON  H+      H                      3.90E-10  0.00      2.8    20   H2+_pd.txt      0.00
+35 87 H3+     PHOTON  H2+     H                      5.00E-13  0.00      2.3    20   H3+_pd.txt      0.00
+35 87 H3+     PHOTON  H+      H2                     5.00E-13  0.00      1.8    20   H3+_pd.txt      0.00
+HEA17 CH+     PHOTON  H+      C                      2.60E-10  0.00      3.5    20   CH+_pd.txt      0.00
+HEA17 CH2+    PHOTON  CH+     H                      1.20E-10  0.00      2.7    20   CH2+_pd.txt     0.00
+36b77 CH3+    PHOTON  CH2+    H                      1.00E-09  0.00      1.7    20                   0.00
+36b77 CH3+    PHOTON  CH+     H2                     1.00E-09  0.00      1.7    20                   0.00
+HEA17 CH4+    PHOTON  CH3+    H                      1.90E-10  0.00      3.1    20   CH4+_pd.txt     0.00
+15b   CH5+    PHOTON  CH4+    H                      1.00E-09  0.00      1.7    20                   0.00
+15b   CH5+    PHOTON  CH3+    H2                     1.00E-09  0.00      1.7    20                   0.00
+HEA17 O2+     PHOTON  O       O+                     2.30E-11  0.00      2.4    20   O2+_pd.txt      0.00
+HEA17 OH+     PHOTON  O+      H                      1.10E-11  0.00      4.0    20   OH+_pd.txt      0.00
+15b   H2O+    PHOTON  OH+     H                      3.00E-10  0.00      2.0    20                   0.00
+15b   H2O+    PHOTON  H+      OH                     1.00E-10  0.00      2.0    20                   0.00
+15b   H2O+    PHOTON  H2+     O                      1.00E-10  0.00      2.0    20                   0.00
+15b   H3O+    PHOTON  H2O+    H                      1.50E-11  0.00      2.0    20                   0.00
+15b   H3O+    PHOTON  H2+     OH                     5.00E-11  0.00      2.0    20                   0.00
+15b   H3O+    PHOTON  H2O     H+                     5.00E-11  0.00      2.0    20                   0.00
+HEA17 CO+     PHOTON  C+      O                      7.10E-11  0.00      2.9    20   CO+_pd.txt      0.00
+HEA17 HCO+    PHOTON  CO+     H                      3.70E-12  0.00      3.7    20   HCO+_pd.txt     0.00
+15c   HCO2+   PHOTON  H+      CO2                    3.00E-10  0.00      3.0    20                   0.00
+p & h C2+     PHOTON  C       C+                     1.00E-11  0.00      1.7    20                   0.00
+15c   C2H+    PHOTON  C2+     H                      1.00E-10  0.00      2.0    20                   0.00
+15c   C2H2+   PHOTON  C2+     H2                     1.00E-10  0.00      2.0    20                   0.00
+15c   C2H3+   PHOTON  C2H+    H2                     1.00E-10  0.00      3.0    20                   0.00
+15c   C3+     PHOTON  C2+     C                      1.00E-10  0.00      3.0    20                   0.00
+15c   C3H+    PHOTON  C3+     H                      1.00E-10  0.00      3.0    20                   0.00
+15c   C3H2+   PHOTON  C3+     H2                     1.00E-10  0.00      3.0    20                   0.00
+15c   C3H3+   PHOTON  C3H+    H2                     1.00E-10  0.00      3.0    20                   0.00
+HEA17 NH+     PHOTON  N+      H                      3.60E-11  0.00      2.1    20   NH+_pd.txt      0.00
+guess NH2+    PHOTON  N+      H2                     1.00E-10  0.00      2.0    20                   0.00
+guess NH3+    PHOTON  NH+     H2                     1.00E-10  0.00      2.0    20                   0.00
+guess NH4+    PHOTON  NH3+    H                      1.00E-10  0.00      2.0    20                   0.00
+guess CN+     PHOTON  C+      N                      1.00E-10  0.00      2.0    20                   0.00
+guess C2N+    PHOTON  C+      CN                     1.00E-10  0.00      2.0    20                   0.00
+guess HCN+    PHOTON  CN+     H                      1.00E-10  0.00      2.0    20                   0.00
+guess H2CN+   PHOTON  HCN+    H                      1.00E-10  0.00      2.0    20                   0.00
+guess H2NC+   PHOTON  HCN+    H                      1.00E-10  0.00      2.0    20                   0.00
+guess N2+     PHOTON  N+      N                      1.00E-10  0.00      2.0    20                   0.00
+guess N2H+    PHOTON  H+      N2                     1.00E-10  0.00      2.0    20                   0.00
+guess NO+     PHOTON  N+      O                      1.00E-10  0.00      2.0    20                   0.00
+guess HNO+    PHOTON  NO+     H                      1.00E-10  0.00      2.0    20                   0.00
+HEA17 SH+     PHOTON  S+      H                      5.20E-10  0.00      2.8    20   SH+_pd.txt      0.00
+guess H2S+    PHOTON  SH+     H                      1.00E-10  0.00      2.0    20                   0.00
+guess H3S+    PHOTON  H2S+    H                      1.00E-10  0.00      2.0    20                   0.00
+guess CS+     PHOTON  C+      S                      1.00E-10  0.00      2.0    20                   0.00
+rfPDR HCS+    PHOTON  CS+     H                      7.00E-10  0.00      1.7    20                   0.00
+guess SO+     PHOTON  S+      O                      1.00E-10  0.00      2.0    20                   0.00
+guess HSO+    PHOTON  SO+     H                      1.00E-10  0.00      2.0    20                   0.00
+guess HSO2+   PHOTON  HSO+    O                      1.00E-10  0.00      2.0    20                   0.00
+guess HOCS+   PHOTON  CS+     OH                     1.00E-10  0.00      2.0    20                   0.00
+Guess SiH+    PHOTON  Si+     H                      1.00E-09  0.00      2.5    20   SiH+_pd.txt     0.00
+Guess SiH2+   PHOTON  SiH+    H                      1.00E-09  0.00      2.5    20                   0.00
+Guess SiH3+   PHOTON  SiH2+   H                      1.00E-09  0.00      2.5    20                   0.00
+Guess SiH4+   PHOTON  SiH3+   H                      1.00E-09  0.00      2.5    20                   0.00
+Guess SiH5+   PHOTON  SiH4+   H                      1.00E-09  0.00      2.5    20                   0.00
+St&Da SiO+    PHOTON  Si+     O                      1.50E-11  0.00      2.5    20                   0.00
+St&Da SiOH+   PHOTON  SiO+    H                      1.50E-11  0.00      2.5    20                   0.00
+jan11 H2CO+   PHOTON  CO+     H2                     7.00E-10  0.00      1.7    20                   0.00
+jan11 H3CO+   PHOTON  HCO+    H2                     7.00E-10  0.00      1.7    20                   0.00
+jan11 CH3OH+  PHOTON  CH3+    OH                     7.00E-10  0.00      1.7    20                   0.00
+jan11 CH5O+   PHOTON  CH3+    H2O                    7.00E-10  0.00      1.7    20                   0.00
+PDRft C54H18- PHOTON  C54H18  ELECTR                 1.83E-08  0.00      3.5    20                   0.00
+PDRft C54H18  PHOTON  C54H18+ ELECTR                 1.17E-08  0.00      4.0    20                   0.00
+PDRft G-      PHOTON  G       ELECTR                 4.56E-06  0.00      3.8    40                   0.00
+PDRft G       PHOTON  G+      ELECTR                 4.06E-06  0.00      4.0    40                   0.00
+      C54H18  ELECTR  C54H18- PHOTON                 1.00E-07  0.00      0.0    41                   0.00
+      C54H18+ ELECTR  C54H18  PHOTON                 3.30E-06 -0.50      0.0    41                   0.00
+      C54H18+ C54H18- C54H18  C54H18                 3.00E-09 -0.50      0.0    41                   0.00
+      C54H18- H+      C54H18  H                      7.50E-08 -0.50      0.0    41                   0.00
+      C54H18- H3+     C54H18  H2      H              2.20E-08 -0.50      0.0    41                   0.00
+      C54H18- H3+     C54H18  H       H       H      2.20E-08 -0.50      0.0    41                   0.00
+      C54H18- He+     C54H18  He                     3.80E-08 -0.50      0.0    41                   0.00
+      C54H18- C+      C54H18  C                      2.20E-08 -0.50      0.0    41                   0.00
+      C54H18- H3O+    C54H18  H2O     H              1.70E-08 -0.50      0.0    41                   0.00
+      C54H18- H3S+    C54H18  H2S     H              1.30E-08 -0.50      0.0    41                   0.00
+      C54H18- NH4+    C54H18  NH3     H              1.80E-08 -0.50      0.0    41                   0.00
+      C54H18- HCO+    C54H18  CO      H              1.40E-08 -0.50      0.0    41                   0.00
+      C54H18- HCS+    C54H18  CS      H              1.10E-08 -0.50      0.0    41                   0.00
+      C54H18- Si+     C54H18  Si                     1.40E-08 -0.50      0.0    41                   0.00
+      C54H18- Fe+     C54H18  Fe                     1.00E-08 -0.50      0.0    41                   0.00
+      C54H18- S+      C54H18  S                      1.30E-08 -0.50      0.0    41                   0.00
+      C54H18  H+      C54H18+ H                      4.40E-09  0.00      0.0    41                   0.00
+      C54H18  H3+     C54H18+ H2      H              1.30E-09  0.00      0.0    41                   0.00
+      C54H18  H3+     C54H18+ H       H       H      1.30E-09  0.00      0.0    41                   0.00
+      C54H18  He+     C54H18+ He                     2.20E-09  0.00      0.0    41                   0.00
+      C54H18  C+      C54H18+ C                      1.30E-09  0.00      0.0    41                   0.00
+      C54H18  H3O+    C54H18+ H2O     H              1.00E-09  0.00      0.0    41                   0.00
+      C54H18  H3S+    C54H18+ H2S     H              7.40E-10  0.00      0.0    41                   0.00
+      C54H18  NH4+    C54H18+ NH3     H              1.00E-09  0.00      0.0    41                   0.00
+      C54H18  HCO+    C54H18+ CO      H              8.20E-10  0.00      0.0    41                   0.00
+      C54H18  HCS+    C54H18+ CS      H              6.50E-10  0.00      0.0    41                   0.00
+      C54H18  Si+     C54H18+ Si                     8.30E-10  0.00      0.0    41                   0.00
+      C54H18  Fe+     C54H18+ Fe                     5.90E-10  0.00      0.0    41                   0.00
+      C54H18  S+      C54H18+ S                      7.80E-10  0.00      0.0    41                   0.00
+      G       ELECTR  G-      PHOTON                 6.90E-05  0.50      0.0    41                   0.00
+      G+      ELECTR  G       PHOTON                 6.90E-05  0.50      0.0    41                   0.00
+      G-      H+      G       H                      1.60E-06  0.50      0.0    41                   0.00
+      G-      H3+     G       H2      H              9.22E-07  0.50      0.0    41                   0.00
+      G-      He+     G       He                     8.00E-07  0.50      0.0    41                   0.00
+      G-      C+      G       C                      4.61E-07  0.50      0.0    41                   0.00
+      G-      H3O+    G       H2O     H              3.66E-07  0.50      0.0    41                   0.00
+      G-      H3S+    G       H2S     H              2.70E-07  0.50      0.0    41                   0.00
+      G-      NH4+    G       NH3     H              3.76E-07  0.50      0.0    41                   0.00
+      G-      HCO+    G       CO      H              2.96E-07  0.50      0.0    41                   0.00
+      G-      HCS+    G       CS      H              2.38E-07  0.50      0.0    41                   0.00
+      G-      Si+     G       Si                     3.01E-07  0.50      0.0    41                   0.00
+      G-      Fe+     G       Fe                     2.13E-07  0.50      0.0    41                   0.00
+      G-      S+      G       S                      2.82E-07  0.50      0.0    41                   0.00
+      G       H+      G+      H                      1.60E-06  0.50      0.0    41                   0.00
+      G       H3+     G+      H2      H              9.22E-07  0.50      0.0    41                   0.00
+      G       He+     G+      He                     8.00E-07  0.50      0.0    41                   0.00
+      G       C+      G+      C                      4.61E-07  0.50      0.0    41                   0.00
+      G       H3O+    G+      H2O     H              3.66E-07  0.50      0.0    41                   0.00
+      G       H3S+    G+      H2S     H              2.70E-07  0.50      0.0    41                   0.00
+      G       NH4+    G+      NH3     H              3.76E-07  0.50      0.0    41                   0.00
+      G       HCO+    G+      CO      H              2.96E-07  0.50      0.0    41                   0.00
+      G       HCS+    G+      CS      H              2.38E-07  0.50      0.0    41                   0.00
+      G       Si+     G+      Si                     3.01E-07  0.50      0.0    41                   0.00
+      G       Fe+     G+      Fe                     2.13E-07  0.50      0.0    41                   0.00
+      G       S+      G+      S                      2.82E-07  0.50      0.0    41                   0.00
+P & H H       CRP     H+      ELECTR                 4.60E-01  0.00 ********    30                   0.00
+P & H He      CRP     He+     ELECTR                 5.00E-01  0.00 ********    30                   0.00
+P & H H2      CRP     H+      H       ELECTR         4.00E-02  0.00 ********    30                   0.00
+P & H H2      CRP     H       H                      1.50E+00  0.00 ********    30                   0.00
+P & H H2      CRP     H2+     ELECTR                 9.60E-01  0.00 ********    30                   0.00
+P & H C       CRP     C+      ELECTR                 1.80E+00  0.00 ********    30                   0.00
+P & H O       CRP     O+      ELECTR                 2.80E+00  0.00 ********    30                   0.00
+P & H N       CRP     N+      ELECTR                 2.10E+00  0.00 ********    30                   0.00
+HAY17 OH      SECPHO  O       H                      4.70E+00  0.00 140000.0    30                   0.00
+HAY17 H2O     SECPHO  OH      H                      7.70E+00  0.00 140000.0    30                   0.00
+HAY17 H2O     SECPHO  O       H2                     2.30E+00  0.00 140000.0    30                   0.00
+HAY17 H2O     SECPHO  H2O+    ELECTR                 2.30E+00  0.00 140000.0    30                   0.00
+HAY17 O2      SECPHO  O       O                      7.80E+00  0.00 140000.0    30                   0.00
+HAY17 O2      SECPHO  O2+     ELECTR                 2.80E+00  0.00 140000.0    30                   0.00
+HAY17 C       SECPHO  C+      ELECTR                 2.60E+00  0.00 140000.0    30                   0.00
+HAY17 CH      SECPHO  C       H                      1.10E+00  0.00 140000.0    30                   0.00
+HAY17 CH      SECPHO  CH+     ELECTR                 5.80E+00  0.00 140000.0    30                   0.00
+HAY17 CH2     SECPHO  C       H2                     2.90E+00  0.00 140000.0    30                   0.00
+HAY17 CH3     SECPHO  CH      H2                     2.80E+00  0.00 140000.0    30                   0.00
+HAY17 CH3     SECPHO  CH3+    ELECTR                 3.80E+00  0.00 140000.0    30                   0.00
+HAY17 CH4     SECPHO  CH3     H                      1.50E+00  0.00 140000.0    30                   0.00
+HAY17 CH4     SECPHO  CH4+    ELECTR                 2.20E+00  0.00 140000.0    30                   0.00
+HAY17 CH+     SECPHO  C       H+                     2.20E+00  0.00 140000.0    30                   0.00
+HAY17 C2      SECPHO  C       C                      1.80E+00  0.00 140000.0    30                   0.00
+HAY17 C2      SECPHO  C2+     ELECTR                 2.50E+00  0.00 140000.0    30                   0.00
+HAY17 C2H     SECPHO  C2      H                      1.10E+00  0.00 140000.0    30                   0.00
+HAY17 C2H2    SECPHO  C2H     H                      3.50E+00  0.00 140000.0    30                   0.00
+HAY17 C2H2    SECPHO  C2H2+   ELECTR                 3.80E+00  0.00 140000.0    30                   0.00
+HAY17 C3      SECPHO  C2      C                      6.90E+00  0.00 140000.0    30                   0.00
+HAY17 C3H     SECPHO  C3      H                      3.00E+00  0.00 140000.0    30                   0.00
+HAY17 C3H2    SECPHO  C3H     H                      3.40E+00  0.00 140000.0    30                   0.00
+HAY17 NH2     SECPHO  NH      H                      7.20E+00  0.00 140000.0    30                   0.00
+HAY17 NH2     SECPHO  NH2+    ELECTR                 1.40E+00  0.00 140000.0    30                   0.00
+HAY17 NH3     SECPHO  NH      H2                     6.71E+00  0.00 140000.0    30                   0.00
+HAY17 NH3     SECPHO  NH2     H                      4.29E+00  0.00 140000.0    30                   0.00
+HAY17 NH3     SECPHO  NH3+    ELECTR                 2.20E+00  0.00 140000.0    30                   0.00
+HAY17 N2      SECPHO  N       N                      3.90E+00  0.00 140000.0    30                   0.00
+HAY17 NH      SECPHO  N       H                      3.70E+00  0.00 140000.0    30                   0.00
+HAY17 NH      SECPHO  NH+     ELECTR                 7.10E+00  0.00 140000.0    30                   0.00
+HAY17 S       SECPHO  S+      ELECTR                 8.00E+00  0.00 140000.0    30                   0.00
+HAY17 SH      SECPHO  S       H                      1.10E+00  0.00 140000.0    30                   0.00
+HAY17 SH      SECPHO  SH+     ELECTR                 3.40E+00  0.00 140000.0    30                   0.00
+HAY17 H2S     SECPHO  SH      H                      3.40E+00  0.00 140000.0    30                   0.00
+HAY17 H2S     SECPHO  H2S+    ELECTR                 6.20E+00  0.00 140000.0    30                   0.00
+HAY17 CO2     SECPHO  CO      O                      6.00E+00  0.00 140000.0    30                   0.00
+GRE87 CO      SECPHO  C       O                      6.80E+00  1.20 140000.0    30                   0.00
+HAY17 CO      SECPHO  CO+     ELECTR                 1.40E+00  0.00 140000.0    30                   0.00
+HAY17 HCO     SECPHO  CO      H                      5.30E+00  0.00 140000.0    30                   0.00
+HAY17 H2CO    SECPHO  H2CO+   ELECTR                 2.90E+00  0.00 140000.0    30                   0.00
+HAY17 H2CO    SECPHO  CO      H2                     1.30E+00  0.00 140000.0    30                   0.00
+HAY17 CH3OH   SECPHO  CH3OH+  ELECTR                 2.40E+00  0.00 140000.0    30                   0.00
+HAY17 CH3OH   SECPHO  CH3     OH                     1.60E+00  0.00 140000.0    30                   0.00
+HAY17 CN      SECPHO  C       N                      4.50E+00  0.00 140000.0    30                   0.00
+HAY17 CN      SECPHO  CN+     ELECTR                 8.30E+00  0.00 140000.0    30                   0.00
+HAY17 HCN     SECPHO  CN      H                      2.00E+00  0.00 140000.0    30                   0.00
+HAY17 HCN     SECPHO  HCN+    ELECTR                 1.40E+00  0.00 140000.0    30                   0.00
+HAY17 HNC     SECPHO  CN      H                      2.00E+00  0.00 140000.0    30                   0.00
+HAY17 NO      SECPHO  N       O                      3.00E+00  0.00 140000.0    30                   0.00
+HAY17 NO      SECPHO  NO+     ELECTR                 2.40E+00  0.00 140000.0    30                   0.00
+HAY17 SO      SECPHO  S       O                      5.50E+00  0.00 140000.0    30                   0.00
+HAY17 SO      SECPHO  SO+     ELECTR                 4.50E+00  0.00 140000.0    30                   0.00
+HAY17 CS      SECPHO  S       C                      1.90E+00  0.00 140000.0    30                   0.00
+HAY17 CS      SECPHO  CS+     ELECTR                 2.00E+00  0.00 140000.0    30                   0.00
+HAY17 OCS     SECPHO  CO      S                      5.20E+00  0.00 140000.0    30                   0.00
+HAY17 SO2     SECPHO  SO      O                      2.70E+00  0.00 140000.0    30                   0.00
+HAY17 Fe      SECPHO  Fe+     ELECTR                 4.80E+00  0.00 140000.0    30                   0.00
+HAY17 H2+     SECPHO  H+      H                      6.10E+00  0.00 140000.0    30                   0.00
+HAY17 CH2+    SECPHO  CH+     H                      8.90E+00  0.00 140000.0    30                   0.00
+HAY17 CH4+    SECPHO  CH3+    H                      2.70E+00  0.00 140000.0    30                   0.00
+HAY17 OH+     SECPHO  O+      H                      8.60E+00  0.00 140000.0    30                   0.00
+HAY17 O2+     SECPHO  O+      O                      7.00E+00  0.00 140000.0    30                   0.00
+HAY17 CO+     SECPHO  C+      O                      7.70E+00  0.00 140000.0    30                   0.00
+HAY17 HCO+    SECPHO  CO+     H                      3.30E+00  0.00 140000.0    30                   0.00
+HAY17 NH+     SECPHO  N+      H                      2.20E+00  0.00 140000.0    30                   0.00
+HAY17 SH+     SECPHO  S+      H                      4.60E+00  0.00 140000.0    30                   0.00
+HAY17 Si      SECPHO  Si+     ELECTR                 4.20E+03  0.00 140000.0    30                   0.00
+HAY17 SiH     SECPHO  Si      H                      6.20E+02  0.00 140000.0    30                   0.00
+HAY17 SiH+    SECPHO  Si+     H                      1.20E+03  0.00 140000.0    30                   0.00
+HAY17 SiO     SECPHO  Si      O                      8.90E+02  0.00 140000.0    30                   0.00
+L&G90 SiO2    SECPHO  SiO     O                      3.00E+03  0.00 140000.0    30                   0.00
+13 87 SiH4    SECPHO  SiH3    H                      4.68E+03  0.00 140000.0    30                   0.00
+56 88 C54H18  SECPHO  C54H18+ ELECTR                 2.00E+04  0.00 140000.0    30                   0.00
+56 88 C54H18- SECPHO  C54H18  ELECTR                 2.00E+04  0.00 140000.0    30                   0.00
+      G       SECPHO  G+      ELECTR                 6.30E+07  0.00 140000.0    30                   0.00
+      G-      SECPHO  G       ELECTR                 4.10E+08  0.00 140000.0    30                   0.00
+DESOR H2O*    CRP     H2O     GRAIN                  7.00E+01  0.00   1500.0    52                   0.00
+DESOR O2*     CRP     O2      GRAIN                  7.00E+01  0.00   1200.0    52                   0.00
+DESOR CO*     CRP     CO      GRAIN                  7.00E+01  0.00    960.0    52                   0.00
+DESOR CO2*    CRP     CO2     GRAIN                  7.00E+01  0.00   2500.0    52                   0.00
+DESOR CH4*    CRP     CH4     GRAIN                  7.00E+01  0.00   1100.0    52                   0.00
+DESOR NH3*    CRP     NH3     GRAIN                  7.00E+01  0.00   1110.0    52                   0.00
+DESOR CH3OH*  CRP     CH3OH   GRAIN                  7.00E+01  0.00   2060.0    52                   0.00
+DESOR H2CO*   CRP     H2CO    GRAIN                  7.00E+01  0.00   1760.0    52                   0.00
+DESOR HCO2H*  CRP     HCO2H   GRAIN                  7.00E+01  0.00   2570.0    52                   0.00
+DESOR OCS*    CRP     OCS     GRAIN                  7.00E+01  0.00   3000.0    52                   0.00
+DESOR H2S*    CRP     H2S     GRAIN                  7.00E+01  0.00   1800.0    52                   0.00
+DESOR SiH4*   CRP     SiH4    GRAIN                  7.00E+01  0.00   3690.0    52                   0.00
+DESOR SiO*    CRP     SiO     GRAIN                  7.00E+01  0.00   3500.0    52                   0.00
+DESOR SiO2*   CRP     SiO2    GRAIN                  7.00E+01  0.00   4300.0    52                   0.00
+DESOR Fe*     CRP     Fe      GRAIN                  7.00E+01  0.00   4200.0    52                   0.00
+87 88 H       H       H2                             8.14E-17  0.50      0.0     1                   4.48
+SPUTT CH4*    H       CH4     H       GRAIN          4.00E-05  0.00   2000.0    56                   0.00
+SPUTT CH4*    H2      CH4     H2      GRAIN          1.00E-04  0.00   2000.0    56                   0.00
+SPUTT CH4*    He      CH4     He      GRAIN          8.00E-04  0.00   2000.0    56                   0.00
+SPUTT O2*     H       O2      H       GRAIN          4.00E-05  0.00   2000.0    56                   0.00
+SPUTT O2*     H2      O2      H2      GRAIN          1.00E-04  0.00   2000.0    56                   0.00
+SPUTT O2*     He      O2      He      GRAIN          8.00E-04  0.00   2000.0    56                   0.00
+SPUTT H2O*    H       H2O     H       GRAIN          4.00E-05  0.00   6000.0    56                   0.00
+SPUTT H2O*    H2      H2O     H2      GRAIN          1.00E-04  0.00   6000.0    56                   0.00
+SPUTT H2O*    He      H2O     He      GRAIN          8.00E-04  0.00   6000.0    56                   0.00
+SPUTT CO*     H       CO      H       GRAIN          4.00E-05  0.00   1900.0    56                   0.00
+SPUTT CO*     H2      CO      H2      GRAIN          1.00E-04  0.00   1900.0    56                   0.00
+SPUTT CO*     He      CO      He      GRAIN          8.00E-04  0.00   1900.0    56                   0.00
+SPUTT SiO*    H       SiO     H       GRAIN          4.00E-05  0.00   1900.0    56                   0.00
+SPUTT SiO*    H2      SiO     H2      GRAIN          1.00E-04  0.00   1900.0    56                   0.00
+SPUTT SiO*    He      SiO     He      GRAIN          8.00E-04  0.00   1900.0    56                   0.00
+SPUTT CO2*    H       CO2     H       GRAIN          4.00E-05  0.00   3100.0    56                   0.00
+SPUTT CO2*    H2      CO2     H2      GRAIN          1.00E-04  0.00   3100.0    56                   0.00
+SPUTT CO2*    He      CO2     He      GRAIN          8.00E-04  0.00   3100.0    56                   0.00
+SPUTT NH3*    H       NH3     H       GRAIN          4.00E-05  0.00   3600.0    56                   0.00
+SPUTT NH3*    H2      NH3     H2      GRAIN          1.00E-04  0.00   3600.0    56                   0.00
+SPUTT NH3*    He      NH3     He      GRAIN          8.00E-04  0.00   3600.0    56                   0.00
+SPUTT CH3OH*  H       CH3OH   H       GRAIN          4.00E-05  0.00   6000.0    56                   0.00
+SPUTT CH3OH*  H2      CH3OH   H2      GRAIN          1.00E-04  0.00   6000.0    56                   0.00
+SPUTT CH3OH*  He      CH3OH   He      GRAIN          8.00E-04  0.00   6000.0    56                   0.00
+SPUTT H2CO*   H       H2CO    H       GRAIN          4.00E-05  0.00   6000.0    56                   0.00
+SPUTT H2CO*   H2      H2CO    H2      GRAIN          1.00E-04  0.00   6000.0    56                   0.00
+SPUTT H2CO*   He      H2CO    He      GRAIN          8.00E-04  0.00   6000.0    56                   0.00
+SPUTT HCO2H*  H       HCO2H   H       GRAIN          4.00E-05  0.00   6000.0    56                   0.00
+SPUTT HCO2H*  H2      HCO2H   H2      GRAIN          1.00E-04  0.00   6000.0    56                   0.00
+SPUTT HCO2H*  He      HCO2H   He      GRAIN          8.00E-04  0.00   6000.0    56                   0.00
+SPUTT OCS*    H       OCS     H       GRAIN          4.00E-05  0.00   6000.0    56                   0.00
+SPUTT OCS*    H2      OCS     H2      GRAIN          1.00E-04  0.00   6000.0    56                   0.00
+SPUTT OCS*    He      OCS     He      GRAIN          8.00E-04  0.00   6000.0    56                   0.00
+SPUTT H2S*    H       H2S     H       GRAIN          4.00E-05  0.00   6000.0    56                   0.00
+SPUTT H2S*    H2      H2S     H2      GRAIN          1.00E-04  0.00   6000.0    56                   0.00
+SPUTT H2S*    He      H2S     He      GRAIN          8.00E-04  0.00   6000.0    56                   0.00
+SPUTT Fe*     H       Fe      H       GRAIN          4.00E-05  0.00   6000.0    56                   0.00
+SPUTT Fe*     H2      Fe      H2      GRAIN          1.00E-04  0.00   6000.0    56                   0.00
+SPUTT Fe*     He      Fe      He      GRAIN          8.00E-04  0.00   6000.0    56                   0.00
+EROSI Mg**    He      GRAIN   He      Mg             1.22E-02 73.00     41.2    55                   0.00
+EROSI Fe**    He      GRAIN   He      Fe             1.15E-02 73.00     41.0    55                   0.00
+EROSI Si**    He      GRAIN   He      Si             1.22E-02 73.00     42.2    55                   0.00
+EROSI C**     He      GRAIN   He      C              1.22E-02 73.00     42.2    55                   0.00
+EROSI O**     He      GRAIN   He      O              5.35E-02 73.00     36.0    55                   0.00
+EROSI Mg**    C       GRAIN   C       Mg             2.94E-02 48.00     36.7    55                   0.00
+EROSI Fe**    C       GRAIN   C       Fe             2.39E-02 47.00     42.8    55                   0.00
+EROSI Si**    C       GRAIN   C       Si             2.70E-02 48.00     36.5    55                   0.00
+EROSI C**     C       GRAIN   C       C              2.70E-02 48.00     36.5    55                   0.00
+EROSI O**     C       GRAIN   C       O              1.05E-01 48.00     30.8    55                   0.00
+EROSI Mg**    N       GRAIN   N       Mg             2.94E-02 48.00     36.7    55                   0.00
+EROSI Fe**    N       GRAIN   N       Fe             2.39E-02 47.00     42.8    55                   0.00
+EROSI Si**    N       GRAIN   N       Si             2.70E-02 48.00     36.5    55                   0.00
+EROSI C**     N       GRAIN   N       C              2.70E-02 48.00     36.5    55                   0.00
+EROSI O**     N       GRAIN   N       O              1.05E-01 48.00     30.8    55                   0.00
+EROSI Mg**    O       GRAIN   O       Mg             2.88E-02 48.00     30.2    55                   0.00
+EROSI Fe**    O       GRAIN   O       Fe             4.12E-02 44.00     59.4    55                   0.00
+EROSI Si**    O       GRAIN   O       Si             3.37E-02 47.00     37.8    55                   0.00
+EROSI C**     O       GRAIN   O       C              3.37E-02 47.00     37.8    55                   0.00
+EROSI O**     O       GRAIN   O       O              1.01E-01 47.00     31.6    55                   0.00
+EROSI Mg**    H2O     GRAIN   H2O     Mg             2.88E-02 48.00     30.2    55                   0.00
+EROSI Fe**    H2O     GRAIN   H2O     Fe             4.12E-02 44.00     59.4    55                   0.00
+EROSI Si**    H2O     GRAIN   H2O     Si             3.37E-02 47.00     37.8    55                   0.00
+EROSI C**     H2O     GRAIN   H2O     C              3.37E-02 47.00     37.8    55                   0.00
+EROSI O**     H2O     GRAIN   H2O     O              1.01E-01 47.00     31.6    55                   0.00
+EROSI Mg**    N2      GRAIN   N2      Mg             2.09E-02 48.00     27.7    55                   0.00
+EROSI Fe**    N2      GRAIN   N2      Fe             4.32E-02 47.00     42.3    55                   0.00
+EROSI Si**    N2      GRAIN   N2      Si             2.22E-02 47.00     28.0    55                   0.00
+EROSI C**     N2      GRAIN   N2      C              2.22E-02 47.00     28.0    55                   0.00
+EROSI O**     N2      GRAIN   N2      O              1.15E-01 46.00     46.0    55                   0.00
+EROSI Mg**    CO      GRAIN   CO      Mg             2.09E-02 48.00     27.7    55                   0.00
+EROSI Fe**    CO      GRAIN   CO      Fe             4.32E-02 47.00     42.3    55                   0.00
+EROSI Si**    CO      GRAIN   CO      Si             2.22E-02 47.00     28.0    55                   0.00
+EROSI C**     CO      GRAIN   CO      C              2.22E-02 47.00     28.0    55                   0.00
+EROSI O**     CO      GRAIN   CO      O              1.15E-01 46.00     46.0    55                   0.00
+EROSI Mg**    O2      GRAIN   O2      Mg             2.09E-02 48.00     27.7    55                   0.00
+EROSI Fe**    O2      GRAIN   O2      Fe             4.32E-02 47.00     42.3    55                   0.00
+EROSI Si**    O2      GRAIN   O2      Si             2.22E-02 47.00     28.0    55                   0.00
+EROSI C**     O2      GRAIN   O2      C              2.22E-02 47.00     28.0    55                   0.00
+EROSI O**     O2      GRAIN   O2      O              1.15E-01 46.00     46.0    55                   0.00
+ADSOR C       GRAIN   CH4*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR CH      GRAIN   CH4*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR CH2     GRAIN   CH4*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR CH3     GRAIN   CH4*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR CH4     GRAIN   CH4*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR O       GRAIN   H2O*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR O2      GRAIN   O2*                            1.00E+00  0.00    102.0    50                   0.00
+ADSOR OH      GRAIN   H2O*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR H2O     GRAIN   H2O*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR CO      GRAIN   CO*                            1.00E+00  0.00    102.0    50                   0.00
+ADSOR CO2     GRAIN   CO2*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR C2      GRAIN   CH4*    CH4*                   1.00E+00  0.00    102.0    50                   0.00
+ADSOR C2H     GRAIN   CH4*    CH4*                   1.00E+00  0.00    102.0    50                   0.00
+ADSOR C2H2    GRAIN   CH4*    CH4*                   1.00E+00  0.00    102.0    50                   0.00
+ADSOR C3      GRAIN   CH4*    CH4*    CH4*           1.00E+00  0.00    102.0    50                   0.00
+ADSOR C3H     GRAIN   CH4*    CH4*    CH4*           1.00E+00  0.00    102.0    50                   0.00
+ADSOR C3H2    GRAIN   CH4*    CH4*    CH4*           1.00E+00  0.00    102.0    50                   0.00
+ADSOR N       GRAIN   NH3*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR NH      GRAIN   NH3*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR NH2     GRAIN   NH3*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR NH3     GRAIN   NH3*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR CN      GRAIN   CH4*    NH3*                   1.00E+00  0.00    102.0    50                   0.00
+ADSOR HCN     GRAIN   CH4*    NH3*                   1.00E+00  0.00    102.0    50                   0.00
+ADSOR HNC     GRAIN   CH4*    NH3*                   1.00E+00  0.00    102.0    50                   0.00
+ADSOR N2      GRAIN   NH3*    NH3*                   1.00E+00  0.00    102.0    50                   0.00
+ADSOR NO      GRAIN   H2O*    NH3*                   1.00E+00  0.00    102.0    50                   0.00
+ADSOR S       GRAIN   H2S*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR SH      GRAIN   H2S*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR H2S     GRAIN   H2S*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR CS      GRAIN   CH4*    H2S*                   1.00E+00  0.00    102.0    50                   0.00
+ADSOR SO      GRAIN   H2O*    H2S*                   1.00E+00  0.00    102.0    50                   0.00
+ADSOR SO2     GRAIN   H2O*    H2O*    H2S*           1.00E+00  0.00    102.0    50                   0.00
+ADSOR OCS     GRAIN   OCS*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR Si      GRAIN   SiH4*                          1.00E+00  0.00    102.0    50                   0.00
+ADSOR SiH     GRAIN   SiH4*                          1.00E+00  0.00    102.0    50                   0.00
+ADSOR SiH2    GRAIN   SiH4*                          1.00E+00  0.00    102.0    50                   0.00
+ADSOR SiH3    GRAIN   SiH4*                          1.00E+00  0.00    102.0    50                   0.00
+ADSOR SiH4    GRAIN   SiH4*                          1.00E+00  0.00    102.0    50                   0.00
+ADSOR SiO     GRAIN   SiO*                           1.00E+00  0.00    102.0    50                   0.00
+ADSOR SiO2    GRAIN   SiO2*                          1.00E+00  0.00    102.0    50                   0.00
+ADSOR CH3OH   GRAIN   CH3OH*                         1.00E+00  0.00    102.0    50                   0.00
+ADSOR HCO     GRAIN   H2CO*                          1.00E+00  0.00    102.0    50                   0.00
+ADSOR H2CO    GRAIN   H2CO*                          1.00E+00  0.00    102.0    50                   0.00
+ADSOR HCO2H   GRAIN   HCO2H*                         1.00E+00  0.00    102.0    50                   0.00
+ADSOR Fe      GRAIN   Fe*                            1.00E+00  0.00    102.0    50                   0.00
+PHDES H2O*    PHOTON  H2O     GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES O2*     PHOTON  O2      GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES CO*     PHOTON  CO      GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES CO2*    PHOTON  CO2     GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES CH4*    PHOTON  CH4     GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES NH3*    PHOTON  NH3     GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES CH3OH*  PHOTON  CH3OH   GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES H2CO*   PHOTON  H2CO    GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES HCO2H*  PHOTON  HCO2H   GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES OCS*    PHOTON  OCS     GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES H2S*    PHOTON  H2S     GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES SiH4*   PHOTON  SiH4    GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES SiO*    PHOTON  SiO     GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES SiO2*   PHOTON  SiO2    GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+PHDES Fe*     PHOTON  Fe      GRAIN                  1.00E-03  0.00      0.0    51                   0.00
+SECDE H2O*    SECPHO  H2O     GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE O2*     SECPHO  O2      GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE CO*     SECPHO  CO      GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE CO2*    SECPHO  CO2     GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE CH4*    SECPHO  CH4     GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE NH3*    SECPHO  NH3     GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE CH3OH*  SECPHO  CH3OH   GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE H2CO*   SECPHO  H2CO    GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE HCO2H*  SECPHO  HCO2H   GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE OCS*    SECPHO  OCS     GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE H2S*    SECPHO  H2S     GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE SiH4*   SECPHO  SiH4    GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE SiO*    SECPHO  SiO     GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE SiO2*   SECPHO  SiO2    GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+SECDE Fe*     SECPHO  Fe      GRAIN                  2.10E+06  0.00      0.0    53                   0.00
+THDES H2O*    VOISIN  H2O     GRAIN                  1.00E+00  0.00   4800.0    54                   0.00
+THDES O2*     VOISIN  O2      GRAIN                  1.00E+00  0.00   1200.0    54                   0.00
+THDES CO*     VOISIN  CO      GRAIN                  1.00E+00  0.00    960.0    54                   0.00
+THDES CO2*    VOISIN  CO2     GRAIN                  1.00E+00  0.00   2500.0    54                   0.00
+THDES CH4*    VOISIN  CH4     GRAIN                  1.00E+00  0.00   1100.0    54                   0.00
+THDES NH3*    VOISIN  NH3     GRAIN                  1.00E+00  0.00   1110.0    54                   0.00
+THDES CH3OH*  VOISIN  CH3OH   GRAIN                  1.00E+00  0.00   2060.0    54                   0.00
+THDES H2CO*   VOISIN  H2CO    GRAIN                  1.00E+00  0.00   1760.0    54                   0.00
+THDES HCO2H*  VOISIN  HCO2H   GRAIN                  1.00E+00  0.00   2570.0    54                   0.00
+THDES OCS*    VOISIN  OCS     GRAIN                  1.00E+00  0.00   3000.0    54                   0.00
+THDES H2S*    VOISIN  H2S     GRAIN                  1.00E+00  0.00   1800.0    54                   0.00
+THDES SiH4*   VOISIN  SiH4    GRAIN                  1.00E+00  0.00   3690.0    54                   0.00
+THDES SiO*    VOISIN  SiO     GRAIN                  1.00E+00  0.00   3500.0    54                   0.00
+THDES SiO2*   VOISIN  SiO2    GRAIN                  1.00E+00  0.00   4300.0    54                   0.00
+THDES Fe*     VOISIN  Fe      GRAIN                  1.00E+00  0.00   4200.0    54                   0.00
+DISSO H2      ELECTR  ELECTR  H       H              2.00E-09  0.50 116300.0     2                   0.00
+DISSO H2      H       H       H       H              1.00E-10  0.00  52000.0     2                   0.00
+DISSO H2      He      He      H       H              1.00E-11  0.00  52000.0     2                   0.00
+DISSO H2      H2      H2      H       H              1.25E-11  0.00  52000.0     2                   0.00
+DISSO H2      H+      H+      H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      H3+     H3+     H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      He+     He+     H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      H3O+    H3O+    H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      H3S+    H3S+    H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      HCO+    HCO+    H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      Fe+     Fe+     H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      NH3+    NH3+    H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      NH4+    NH4+    H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      S+      S+      H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      SiOH+   SiOH+   H       H              3.00E-11  0.50  52000.0     2                   0.00
+DISSO H2      O2+     O2+     H       H              3.00E-11  0.50  52000.0     2                   0.00
+IONIZ H       ELECTR  H+      ELECTR  ELECTR         9.20E-10  0.50 157890.0     0                  *****
+IONIZ H2      ELECTR  H2+     ELECTR  ELECTR         1.40E-09  0.50 179160.0     0                  *****
+IONIZ H       H+      H+      H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       H3+     H3+     H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       He+     He+     H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       H3O+    H3O+    H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       H3S+    H3S+    H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       HCO+    HCO+    H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       Fe+     Fe+     H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       NH3+    NH3+    H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       NH4+    NH4+    H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       S+      S+      H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       SiOH+   SiOH+   H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H       O2+     O2+     H+      ELECTR         1.30E-13  0.50 157890.0     0                  *****
+IONIZ H2      H+      H+      H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      H3+     H3+     H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      He+     He+     H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      H3O+    H3O+    H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      H3S+    H3S+    H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      HCO+    HCO+    H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      Fe+     Fe+     H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      NH3+    NH3+    H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      NH4+    NH4+    H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      S+      S+      H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      SiOH+   SiOH+   H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ H2      O2+     O2+     H2+     ELECTR         1.10E-13  0.50 179160.0     0                  *****
+IONIZ He      H+      H+      He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      H3+     H3+     He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      He+     He+     He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      H3O+    H3O+    He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      H3S+    H3S+    He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      HCO+    HCO+    He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      Fe+     Fe+     He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      NH3+    NH3+    He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      NH4+    NH4+    He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      S+      S+      He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      SiOH+   SiOH+   He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+IONIZ He      O2+     O2+     He+     ELECTR         1.10E-13  0.50 285328.0     0                  *****
+16B83 O       H2      OH      H                      1.55E-13  2.80   2980.0     0                  -0.08
+UMIST CO      H       OH      C                      1.10E-10  0.50  77700.0     0                  -6.71
+72 83 O2      H       OH      O                      1.63E-09 -0.90   8750.0     0                  -0.72
+16B83 OH      H       O       H2                     7.00E-14  2.80   1950.0     0                   0.08
+16B83 OH      H2      H2O     H                      9.54E-13  2.00   1490.0     0                   0.64
+16B83 H2O     H       OH      H2                     5.24E-12  1.90   9265.0     0                  -0.64
+17B73 C       H2      CH      H                      1.16E-09  0.50  14100.0     0                  -1.01
+P & H C       H       CH      PHOTON                 1.00E-17  0.00      0.0     0                   0.00
+22 86 CH      H2      CH2     H                      2.38E-10  0.00   1760.0     0                  -0.17
+17B73 CH2     H2      CH3     H                      5.18E-11  0.17   6400.0     0                   0.32
+23B83 CH3     H2      CH4     H                      3.00E-10  0.00   5460.0     0                  -0.04
+59 82 C2      H2      C2H     H                      1.60E-10  0.00   1419.0     0                   1.44
+  S88 C2H     H2      C2H2    H                      1.14E-11  0.00    950.0     0                   0.23
+17B73 CH      H       C       H2                     1.16E-09  0.50   2200.0     0                   1.01
+22 86 CH2     H       CH      H2                     4.70E-10  0.00    370.0     0                   0.17
+17B73 CH3     H       CH2     H2                     5.18E-11  0.17   5600.0     0                  -0.32
+23B83 CH4     H       CH3     H2                     3.00E-10  0.00   6560.0     0                   0.04
+P & H O2      C       CO      O                      3.30E-11  0.50      0.0     0                   5.99
+93 88 OH      CO      CO2     H                      4.40E-13 -1.15    390.0     0                   1.06
+95 88 OH      C       CO      H                      3.10E-11 -0.36      0.0     0                   6.71
+94 88 OH      O       O2      H                      3.10E-11 -0.36      0.0     0                   0.72
+61 81 CH      O       HCO+    ELECTR                 2.40E-14  0.50      0.0     0                   0.14
+61 81 CH      O       CO      H                      9.50E-11  0.50      0.0     0                   7.64
+P & H CH2     O       CO      H       H              2.00E-11  0.50      0.0     0                   3.33
+  X   CH3     O       CO      H2      H              1.80E-10  0.50      0.0     0                   3.01
+P & H C2      O       CO      C                      5.00E-11  0.50      0.0     0                   4.96
+P & H C2H     O       CO      CH                     1.00E-10  0.00    250.0     0                   2.51
+  X   C3      O       CO      C2                     5.00E-11  0.50      0.0     0                   3.55
+13 87 C3H     O       C2H     CO                     5.00E-11  0.50      0.0     0                   6.50
+13 87 C3H2    O       C2H2    CO                     5.00E-11  0.50      0.0     0                   6.24
+24Y83 C+      H       CH+     PHOTON                 7.00E-17  0.00      0.0     0                   0.00
+GRE92 C+      H2      CH2+    PHOTON                 5.00E-16  0.00      0.0     0                   0.00
+excit C+      H2      CH+     H                      1.58E-10  0.00   4827.0     3                  -0.39
+14 87 CH+     H       C+      H2                     1.50E-10  0.00      0.0     0                   0.39
+27B77 CH+     H2      CH2+    H                      1.20E-09  0.00      0.0     0                   0.19
+27B77 CH2+    H       CH+     H2                     1.20E-09  0.00   2700.0     0                  -0.19
+28B75 CH2+    H2      CH3+    H                      7.00E-10  0.00      0.0     0                   0.75
+28B75 CH3+    H       CH2+    H2                     7.00E-10  0.00  10560.0     0                  -0.75
+ 4Z89 CH3+    H2      CH5+    PHOTON                 6.00E-15  0.00      0.0     0                   0.00
+28B75 CH3+    H2      CH4+    H                      2.00E-10  0.00  32500.0     0                  -2.67
+28B75 CH4+    H       CH3+    H2                     2.00E-10  0.00      0.0     0                   2.67
+28B75 CH4+    H2      CH5+    H                      4.00E-11  0.00      0.0     0                   0.19
+28B75 CH5+    H       CH4+    H2                     4.00E-11  0.00   2200.0     0                  -0.19
+      H+      ELECTR  H       PHOTON                 2.90E-12 -0.74      0.0     4                   0.00
+22Z90 H2+     ELECTR  H       H                      1.60E-08 -0.43      0.0     0                  10.95
+P & H He+     ELECTR  He      PHOTON                 4.50E-12 -0.67      0.0     4                   0.00
+McC03 H3+     ELECTR  H       H       H              5.10E-08 -0.52      0.0     0                   4.77
+McC03 H3+     ELECTR  H2      H                      1.70E-08 -0.52      0.0     0                   9.25
+P & H C+      ELECTR  C       PHOTON                 4.40E-12 -0.61      0.0     4                   0.00
+22Z90 CH+     ELECTR  C       H                      1.50E-07 -0.42      0.0     0                   7.17
+22Z90 CH2+    ELECTR  C       H2                     1.25E-07 -0.50      0.0     0                   6.98
+22Z90 CH2+    ELECTR  CH      H                      1.25E-07 -0.50      0.0     0                   5.97
+22Z90 CH3+    ELECTR  CH2     H                      1.75E-07 -0.50      0.0     0                   5.05
+22Z90 CH3+    ELECTR  CH      H2                     1.75E-07 -0.50      0.0     0                   5.22
+P & H CH4+    ELECTR  CH3     H                      3.00E-07 -0.50      0.0     0                   8.05
+P & H CH4+    ELECTR  CH2     H       H              3.00E-07 -0.50      0.0     0                   3.24
+22Z90 CH5+    ELECTR  CH      H2      H2             8.75E-08 -0.30      0.0     0                   3.23
+22Z90 CH5+    ELECTR  CH2     H2      H              8.75E-08 -0.30      0.0     0                   3.06
+22Z90 CH5+    ELECTR  CH3     H2                     8.75E-08 -0.30      0.0     0                   7.86
+22Z90 CH5+    ELECTR  CH4     H                      8.75E-08 -0.30      0.0     0                   7.82
+79 79 H+      H2      H2+     H                      6.40E-10  0.00  21300.0     0                  -1.83
+01R79 H2+     H       H+      H2                     6.40E-10  0.00      0.0     0                   1.83
+P & H H2+     H2      H3+     H                      2.10E-09  0.00      0.0     0                   1.69
+P & H H3+     H       H2+     H2                     2.10E-09  0.00  20000.0     0                  -1.69
+52R84 H+      O       O+      H                      6.00E-10  0.00    227.0     0                  -0.02
+P & H H+      OH      OH+     H                      2.10E-09  0.00      0.0     0                   0.59
+80R74 H+      O2      O2+     H                      1.20E-09  0.00      0.0     0                   1.52
+80R74 H+      H2O     H2O+    H                      8.20E-09  0.00      0.0     0                   0.99
+P & H H+      CH      CH+     H                      1.90E-09  0.00      0.0     0                   2.96
+P & H H+      CH2     CH+     H2                     1.40E-09  0.00      0.0     0                   3.13
+P & H H+      CH2     CH2+    H                      1.40E-09  0.00      0.0     0                   3.32
+P & H H+      CH3     CH3+    H                      3.40E-09  0.00      0.0     0                   3.75
+80R74 H+      CH4     CH3+    H2                     2.28E-09  0.00      0.0     0                   3.78
+80R74 H+      CH4     CH4+    H                      1.52E-09  0.00      0.0     0                   1.11
+18R80 H+      CO2     HCO+    O                      4.20E-09  0.00      0.0     0                   0.65
+P & H H2+     C       CH+     H                      2.40E-09  0.00      0.0     0                   3.77
+P & H H2+     O       OH+     H                      1.50E-09  0.00      0.0     0                   2.33
+38R75 H2+     CO      HCO+    H                      2.16E-09  0.00      0.0     0                   3.45
+38R75 H2+     CO      CO+     H2                     6.44E-10  0.00      0.0     0                   1.41
+P & H H2+     OH      OH+     H2                     7.60E-10  0.00      0.0     0                   2.41
+38R75 H2+     H2O     H2O+    H2                     3.90E-09  0.00      0.0     0                   2.81
+38R75 H2+     H2O     H3O+    H                      3.40E-09  0.00      0.0     0                   4.51
+P & H H2+     CH      CH+     H2                     7.10E-10  0.00      0.0     0                   4.78
+P & H H2+     CH      CH2+    H                      7.10E-10  0.00      0.0     0                   4.97
+P & H H2+     CH2     CH3+    H                      1.00E-09  0.00      0.0     0                   5.90
+P & H H2+     CH2     CH2+    H2                     1.00E-09  0.00      0.0     0                   5.14
+P & H H3+     O       OH+     H2                     8.00E-10  0.00      0.0     0                   0.64
+P & H H3+     OH      H2O+    H2                     1.30E-09  0.00      0.0     0                   1.76
+ 5Z89 H3+     CO      HCO+    H2                     1.70E-09  0.00      0.0     0                   1.76
+39R82 H3+     CO2     HCO2+   H2                     2.00E-09  0.00      0.0     0                   1.30
+40R75 H3+     H2O     H3O+    H2                     4.30E-09  0.00      0.0     0                   2.81
+P & H H3+     C       CH+     H2                     2.00E-09  0.00      0.0     0                   2.08
+P & H H3+     CH      CH2+    H2                     1.20E-09  0.00      0.0     0                   3.28
+P & H H3+     CH2     CH3+    H2                     1.70E-09  0.00      0.0     0                   4.20
+P & H H3+     CH3     CH4+    H2                     2.10E-09  0.00      0.0     0                   1.21
+ 5Z89 H3+     CH4     CH5+    H2                     1.90E-09  0.00      0.0     0                   1.43
+85 86 He+     H2      H+      H       He             1.10E-13 -0.24      0.0     0                   6.51
+P & H He+     OH      OH+     He                     5.50E-10  0.00      0.0     0                  11.58
+P & H He+     OH      O+      H       He             5.50E-10  0.00      0.0     0                   6.57
+74 85 He+     H2O     OH+     H       He             2.30E-10 -0.94      0.0     0                   6.46
+74 85 He+     H2O     H2O+    He                     4.86E-11 -0.94      0.0     0                  11.98
+74 85 He+     H2O     H+      OH      He             1.64E-10 -0.94      0.0     0                   5.87
+42R85 He+     CO      C+      O       He             1.50E-09  0.00      0.0     0                   2.22
+42R85 He+     O2      O+      O       He             1.00E-09  0.00      0.0     0                   5.85
+81R77 He+     CO2     CO+     O       He             7.70E-10  0.00      0.0     0                   5.12
+81R77 He+     CO2     O+      CO      He             1.80E-10  0.00      0.0     0                   5.52
+81R77 He+     CO2     C+      O2      He             4.00E-11  0.00      0.0     0                   1.88
+P & H He+     CH      C+      H       He             1.10E-09  0.00      0.0     0                   9.85
+P & H He+     CH2     C+      H2      He             7.50E-10  0.00      0.0     0                  10.03
+P & H He+     CH2     CH+     H       He             7.50E-10  0.00      0.0     0                   9.64
+P & H He+     CH3     CH+     H2      He             9.00E-10  0.00      0.0     0                   9.31
+P & H He+     CH3     CH2+    H       He             9.00E-10  0.00      0.0     0                   9.50
+43R76 He+     CH4     H+      CH3     He             4.00E-10  0.00      0.0     0                   6.55
+43R76 He+     CH4     CH+     H2      H       He     2.56E-10  0.00      0.0     0                   4.87
+43R76 He+     CH4     CH2+    H2      He             8.48E-10  0.00      0.0     0                   9.54
+43R76 He+     CH4     CH3+    H       He             8.00E-11  0.00      0.0     0                  10.29
+43R76 He+     CH4     CH4+    He                     1.60E-11  0.00      0.0     0                  12.10
+88 85 C+      OH      CO+     H                      8.00E-10  0.00      0.0     0                   3.96
+88 85 C+      OH      H+      CO                     8.00E-10  0.00      0.0     0                   4.38
+74 85 C+      H2O     HCO+    H                      2.43E-09 -0.63      0.0     0                   5.36
+73R84 C+      O2      O+      CO                     5.15E-10  0.00      0.0     0                   3.64
+73R84 C+      O2      CO+     O                      3.15E-10  0.00      0.0     0                   3.24
+82R81 C+      CO2     CO+     CO                     1.10E-09  0.00      0.0     0                   2.90
+78 83 C+      CH      C2+     H                      3.80E-10  0.00      0.0     0                   1.89
+78 83 C+      CH      CH+     C                      3.80E-10  0.00      0.0     0                   0.62
+P & H C+      CH2     CH2+    C                      5.20E-10  0.00      0.0     0                   0.98
+P & H C+      CH2     C2H+    H                      5.20E-10  0.00      0.0     0                   2.95
+ 7R82 C+      CH4     C2H2+   H2                     3.25E-10  0.00      0.0     0                   4.17
+ 7R82 C+      CH4     C2H3+   H                      9.75E-10  0.00      0.0     0                   4.08
+52R84 O+      H       H+      O                      6.00E-10  0.00      0.0     0                   0.02
+52R84 O+      H2      OH+     H                      1.20E-09  0.00      0.0     0                   0.52
+P & H O2+     C       CO+     O                      5.20E-11  0.00      0.0     0                   4.05
+P & H O2+     C       C+      O2                     5.20E-11  0.00      0.0     0                   0.81
+44R81 OH+     H2      H2O+    H                      1.01E-09  0.00      0.0     0                   1.04
+44R81 H2O+    H2      H3O+    H                      8.30E-10  0.00      0.0     0                   1.69
+P & H H3O+    H       H2O+    H2                     6.10E-10  0.00  20500.0     0                  -1.69
+P & H H3O+    C       HCO+    H2                     1.00E-11  0.00      0.0     0                   5.02
+P & H H3O+    CH      CH2+    H2O                    6.80E-10  0.00      0.0     0                   0.46
+P & H H3O+    CH2     CH3+    H2O                    9.40E-10  0.00      0.0     0                   1.39
+P & H O+      ELECTR  O       PHOTON                 3.40E-12 -0.64      0.0     4                   0.00
+ 1Z83 O2+     ELECTR  O       O                      1.95E-07 -0.70      0.0     0                   6.96
+22Z90 OH+     ELECTR  O       H                      3.75E-08 -0.50      0.0     0                   8.62
+22Z90 H2O+    ELECTR  OH      H                      3.15E-07 -0.50      0.0     0                   7.49
+90 88 H3O+    ELECTR  OH      H2                     8.45E-07 -0.50      0.0     0                   5.80
+90 88 H3O+    ELECTR  H2O     H                      4.55E-07 -0.50      0.0     0                   6.44
+49R76 CH3+    O       HCO+    H2                     3.10E-10  0.00      0.0     0                   5.36
+49R76 CH3+    O       H3+     CO                     1.30E-11  0.00      0.0     0                   3.61
+ 8R80 CH5+    O       H3O+    CH2                    2.16E-10  0.00      0.0     0                   1.65
+51R80 CH5+    CO      HCO+    CH4                    9.90E-10  0.00      0.0     0                   0.32
+40R75 CH5+    H2O     H3O+    CH4                    3.70E-09  0.00      0.0     0                   1.38
+52R84 CO+     H2      HCO+    H                      1.30E-09  0.00      0.0     0                   2.04
+52R84 CO+     H       H+      CO                     7.50E-10  0.00      0.0     0                   0.42
+52R84 HCO+    H       CO+     H2                     1.30E-09  0.00  24500.0     0                  -2.04
+P & H HCO+    C       CH+     CO                     1.10E-09  0.00      0.0     0                   0.32
+P & H HCO+    CH      CH2+    CO                     6.30E-10  0.00      0.0     0                   1.52
+P & H HCO+    CH2     CH3+    CO                     8.60E-10  0.00      0.0     0                   2.45
+27R77 HCO+    CH3     CH4+    CO                     1.40E-09  0.00   9060.0     0                  -0.55
+51R80 HCO+    CH4     CH5+    CO                     9.90E-10  0.00   4920.0     0                  -0.32
+65R78 HCO+    H2O     H3O+    CO                     2.50E-09  0.00      0.0     0                   1.06
+15    HCO+    O2      HCO2+   O                      1.00E-09  0.00   1450.0     0                  -0.12
+15    HCO2+   O       HCO+    O2                     1.00E-09  0.00      0.0     0                   0.12
+15    HCO+    OH      HCO2+   H                      1.00E-09  0.00      0.0     0                   0.60
+15    HCO2+   H       HCO+    OH                     1.00E-09  0.00   7500.0     0                  -0.60
+15    HCO2+   CO      HCO+    CO2                    1.00E-09  0.00      0.0     0                   0.45
+15    HCO+    CO2     HCO2+   CO                     1.00E-09  0.00   5000.0     0                  -0.45
+ 6R80 HCO2+   CH4     CH5+    CO2                    7.80E-10  0.00      0.0     0                   0.13
+22Z90 CO+     ELECTR  C       O                      1.00E-07 -0.46      0.0     0                   2.91
+22Z90 HCO+    ELECTR  CO      H                      2.40E-07 -0.69      0.0     0                   7.50
+ 6Z88 HCO2+   ELECTR  CO2     H                      2.24E-07 -0.50      0.0     0                   7.95
+ 6Z88 HCO2+   ELECTR  CO      OH                     1.16E-07 -0.50      0.0     0                   6.89
+27C77 C2+     H2      C2H+    H                      1.40E-09  0.00      0.0     0                   0.88
+45C77 C2+     H2      H+      C2H                    1.50E-09  0.00   1260.0     0                  -0.11
+45C77 C2H+    H2      C2H2+   H                      1.70E-09  0.00      0.0     0                   1.51
+46C84 C2H2+   H2      C2H3+   H                      5.00E-10  0.00    800.0     0                  -0.09
+22Z90 C2+     ELECTR  C       C                      3.00E-07 -0.50      0.0     0                   5.90
+22Z90 C2H+    ELECTR  C2      H                      1.35E-07 -0.50      0.0     0                   6.69
+22Z90 C2H+    ELECTR  CH      C                      1.35E-07 -0.50      0.0     0                   4.01
+75 88 C2H2+   ELECTR  C2H     H                      1.50E-07 -0.50      0.0     0                   6.62
+75 88 C2H2+   ELECTR  CH      CH                     1.50E-07 -0.50      0.0     0                   1.49
+75 88 C2H3+   ELECTR  C2H     H2                     1.35E-07 -0.50      0.0     0                   6.70
+75 88 C2H3+   ELECTR  CH2     CH                     1.35E-07 -0.50      0.0     0                   1.40
+75 88 C2H3+   ELECTR  C2H2    H                      3.00E-08 -0.50      0.0     0                   6.94
+58 83 C3+     H2      C3H+    H                      3.00E-10  0.00      0.0     0                   2.01
+46C84 C3H+    H2      C3H2+   H                      1.00E-09  0.00    500.0     0                  -0.03
+62 86 C3H+    H2      C3H3+   PHOTON                 3.00E-13 -1.00      0.0     0                   0.00
+46C84 C3H2+   H2      C3H3+   H                      1.00E-10  0.00   2000.0     0                  -0.16
+P & H C3+     ELECTR  C2      C                      3.00E-07 -0.50      0.0     0                   4.81
+P & H C3H+    ELECTR  C2      CH                     1.50E-07 -0.50      0.0     0                   1.79
+P & H C3H+    ELECTR  C2H     C                      1.50E-07 -0.50      0.0     0                   4.24
+75 88 C3H2+   ELECTR  C3H     H                      1.50E-07 -0.50      0.0     0                   4.40
+75 88 C3H2+   ELECTR  C2H     CH                     1.50E-07 -0.50      0.0     0                   3.26
+75 88 C3H3+   ELECTR  C3H2    H                      1.50E-07 -0.50      0.0     0                   5.05
+75 88 C3H3+   ELECTR  C2H2    CH                     1.50E-07 -0.50      0.0     0                   3.65
+P & H H+      C2      C2+     H                      3.10E-09  0.00      0.0     0                   1.55
+P & H H+      C2H     C2+     H2                     1.50E-09  0.00      0.0     0                   0.11
+P & H H+      C2H     C2H+    H                      1.50E-09  0.00      0.0     0                   0.99
+78 83 H+      C2H2    C2H+    H2                     2.00E-09  0.00      0.0     0                   0.76
+78 83 H+      C2H2    C2H2+   H                      2.00E-09  0.00      0.0     0                   2.27
+ 4 84 H+      C3H     C3+     H2                     2.00E-09  0.00      0.0     0                   2.74
+ 4 84 H+      C3H     C3H+    H                      2.00E-09  0.00      0.0     0                   4.75
+ 4 84 H+      C3H2    C3H+    H2                     2.00E-09  0.00      0.0     0                   4.26
+ 4 84 H+      C3H2    C3H2+   H                      2.00E-09  0.00      0.0     0                   4.23
+P & H He+     C2H     C+      CH      He             5.10E-10  0.00      0.0     0                   4.73
+P & H He+     C2H     CH+     C       He             5.10E-10  0.00      0.0     0                   5.35
+P & H He+     C2H     C2+     H       He             5.10E-10  0.00      0.0     0                   6.62
+ 3R75 He+     C2H2    CH+     CH      He             7.70E-10  0.00      0.0     0                   4.11
+ 3R75 He+     C2H2    C2+     H2      He             1.61E-09  0.00      0.0     0                   6.39
+ 3R75 He+     C2H2    C2H+    H       He             8.75E-10  0.00      0.0     0                   7.27
+ 3R75 He+     C2H2    C2H2+   He                     2.45E-10  0.00      0.0     0                  13.26
+ 4 84 He+     C3H     C3+     H       He             2.00E-09  0.00      0.0     0                   9.25
+ 4 84 He+     C3H2    C3H+    H       He             1.00E-09  0.00      0.0     0                  10.77
+ 4 84 He+     C3H2    C3+     H2      He             1.00E-09  0.00      0.0     0                   8.76
+P & H H3+     C2H     C2H2+   H2                     1.70E-09  0.00      0.0     0                   2.64
+ 2R77 H3+     C2H2    C2H3+   H2                     2.90E-09  0.00      0.0     0                   2.32
+ 4 84 H3+     C3H     C3H2+   H2                     2.00E-09  0.00      0.0     0                   4.86
+ 4 84 H3+     C3H2    C3H3+   H2                     2.00E-09  0.00      0.0     0                   4.21
+P & H C+      C2H     C3+     H                      1.00E-09  0.00      0.0     0                   0.54
+ 7R82 C+      C2H2    C3H+    H                      2.20E-09  0.00      0.0     0                   2.31
+P & H HCO+    C2H     C2H2+   CO                     7.80E-10  0.00      0.0     0                   0.88
+54R77 HCO+    C2H2    C2H3+   CO                     1.36E-09  0.00      0.0     0                   0.56
+ 4 84 HCO+    C3H     C3H2+   CO                     1.40E-09  0.00      0.0     0                   3.10
+ 4 84 HCO+    C3H2    C3H3+   CO                     1.40E-09  0.00      0.0     0                   2.45
+10R86 H3O+    C2H     C2H2+   H2O                    2.20E-10  0.00   4100.0     0                  -0.18
+15    H3O+    C2H2    C2H3+   H2O                    1.00E-09  0.00   7330.0     0                  -0.50
+75 88 H3O+    C3H     C3H2+   H2O                    2.00E-09  0.00      0.0     0                   2.04
+75 88 H3O+    C3H2    C3H3+   H2O                    3.00E-09  0.00      0.0     0                   1.39
+10R86 C2H2+   H2O     H3O+    C2H                    2.20E-10  0.00      0.0     0                   0.18
+10R86 C2H3+   H2O     H3O+    C2H2                   1.11E-09  0.00      0.0     0                   0.50
+83R83 C3H+    H2O     HCO+    C2H2                   2.48E-10  0.00      0.0     0                   3.05
+83R83 C3H+    H2O     C2H3+   CO                     2.02E-10  0.00      0.0     0                   3.61
+P & H H+      Fe      Fe+     H                      7.40E-09  0.00      0.0     0                   5.73
+P & H H3+     Fe      Fe+     H2      H              4.90E-09  0.00      0.0     0                   1.38
+P & H C+      Fe      Fe+     C                      2.60E-09  0.00      0.0     0                   3.39
+P & H HCO+    Fe      Fe+     CO      H              1.90E-09  0.00      0.0     0                  -0.38
+P & H H3O+    Fe      Fe+     H2O     H              3.10E-09  0.00      0.0     0                  -1.43
+P & H O2+     Fe      Fe+     O2                     1.10E-09  0.00      0.0     0                   4.20
+P & H Fe+     ELECTR  Fe      PHOTON                 3.70E-12 -0.65      0.0     4                   0.00
+97 83 N       H2      NH      H                      8.66E-10  0.50  14600.0     0                  -1.26
+97 83 NH      H2      NH2     H                      5.25E-12  0.79   6700.0     0                  -0.34
+97 83 NH2     H2      NH3     H                      6.22E-11  0.50   6300.0     0                   0.17
+14Z90 CN      H2      HCN     H                      3.53E-13  3.31    756.0     0                   0.83
+97 83 NH      H       N       H2                     8.66E-10  0.50   2400.0     0                   1.26
+97 83 NH2     H       NH      H2                     5.25E-12  0.79   2200.0     0                   0.34
+97 83 NH3     H       NH2     H2                     6.22E-11  0.50   5700.0     0                  -0.17
+P & H NH      O       OH      N                      2.90E-11  0.50      0.0     0                   1.18
+P & H NH2     O       NH      OH                     3.50E-12  0.50      0.0     0                   0.26
+97 83 NH3     O       NH2     OH                     2.50E-12  0.00   3020.0     0                  -0.25
+P & H CN      O       CO      N                      1.80E-11  0.50     50.0     0                   3.33
+97 83 NH3     OH      NH2     H2O                    2.30E-12  0.00    800.0     0                   0.47
+P & H NH      C       CN      H                      1.10E-10  0.50      0.0     0                   4.56
+94 88 CH      N       CN      H                      2.10E-11  0.00      0.0     0                   4.31
+97 83 CN      N       N2      C                      7.30E-10  0.00   4500.0     0                   1.98
+P & H NH      N       N2      H                      5.00E-11  0.50      0.0     0                   6.54
+94E88 OH      N       NO      H                      5.30E-11  0.00     50.0     0                   2.11
+97 83 O2      N       NO      O                      3.30E-12  1.00   3150.0     0                   1.39
+P & H NO      C       CN      O                      1.10E-10  0.50      0.0     0                   1.27
+94E88 NO      N       N2      O                      3.40E-11  0.00     50.0     0                   3.25
+97 83 NO      O       O2      N                      7.50E-13  1.00  16000.0     0                  -1.39
+GUESS HNC     H       HCN     H                      1.00E-10  0.50    200.0     0                   0.68
+GUESS HNC     O       CO      NH                     2.00E-10  0.50    200.0     0                   1.92
+GUESS HNC     OH      H2O     CN                     2.00E-10  0.50    200.0     0                   0.48
+GUESS HNC     O2      CO2     NH                     2.00E-11  0.50   2000.0     0                   2.25
+ 3Z82 NH2     C       HNC     H                      2.00E-11  0.50      0.0     0                   5.05
+P & H CH2     N       HCN     H                      2.00E-11  0.50      0.0     0                   5.31
+P & H CH3     N       HCN     H2                     2.00E-11  0.50      0.0     0                   4.98
+GUESS CH5+    HNC     C2H3+   NH3                    1.00E-09  0.00      0.0     0                   0.23
+GUESS CH5+    HCN     C2H3+   NH3                    1.00E-09  0.00   5120.0     0                  -0.44
+13R85 N+      H2      NH+     H                      8.40E-10  0.00    168.5     0                  -0.22
+10R80 NH+     H2      NH2+    H                      1.27E-09  0.00      0.0     0                   2.03
+10R80 NH+     H2      H3+     N                      2.25E-10  0.00      0.0     0                   1.02
+10R80 NH2+    H2      NH3+    H                      2.70E-10  0.00      0.0     0                   1.13
+07R83 NH3+    H2      NH4+    H                      2.40E-12  0.00      0.0     0                   0.97
+13R85 NH+     H       N+      H2                     6.52E-10  0.00      0.0     0                   0.22
+10R80 NH2+    H       NH+     H2                     1.27E-09  0.00  24000.0     0                  -2.03
+10R80 NH3+    H       NH2+    H2                     2.25E-10  0.00  12800.0     0                  -1.13
+15    NH4+    H       NH3+    H2                     1.00E-09  0.00  11000.0     0                  -0.97
+04R84 CN+     H2      HCN+    H                      1.00E-09  0.00      0.0     0                   1.37
+04R84 HCN+    H       CN+     H2                     1.00E-09  0.00  15800.0     0                  -1.37
+01R79 HCN+    H2      H2CN+   H                      9.80E-10  0.00      0.0     0                   2.96
+01R79 H2CN+   H       HCN+    H2                     9.80E-10  0.00  34400.0     0                  -2.96
+ 9Z89 N2+     H2      N2H+    H                      2.00E-09  0.24      0.0     0                   2.61
+10R80 N2H+    H       N2+     H2                     2.10E-09  0.00  30300.0     0                  -2.61
+08R82 N2H+    H2      H3+     N2                     1.80E-09  0.00   8300.0     0                  -0.76
+ 52   H+      HNC     H+      HCN                    1.00E-09  0.00      0.0     0                   0.68
+15    H+      HCN     H+      HNC                    1.00E-09  0.00   7850.0     0                  -0.68
+P & H H+      NH      NH+     H                      2.10E-09  0.00      0.0     0                   0.11
+P & H H+      NH2     NH2+    H                      2.90E-09  0.00      0.0     0                   2.47
+12R85 H+      NH3     NH3+    H                      5.20E-09  0.00      0.0     0                   3.44
+15    H+      CN      CN+     H                      2.10E-09  0.00   6150.0     0                  -0.54
+12R85 H+      HCN     HCN+    H                      1.10E-08  0.00      0.0     0                  -0.00
+01R72 H+      NO      NO+     H                      1.90E-09  0.00      0.0     0                   4.32
+P & H He+     NH      N+      H       He             1.10E-09  0.00      0.0     0                   6.84
+P & H He+     NH2     NH+     H       He             8.00E-10  0.00      0.0     0                   6.96
+P & H He+     NH2     N+      H2      He             8.00E-10  0.00      0.0     0                   7.18
+02R75 He+     NH3     NH3+    He                     2.64E-10  0.00      0.0     0                  14.43
+02R75 He+     NH3     NH2+    H       He             1.76E-09  0.00      0.0     0                   8.82
+02R75 He+     NH3     NH+     H2      He             1.76E-10  0.00      0.0     0                   6.79
+P & H He+     CN      C+      N       He             8.80E-10  0.00      0.0     0                   5.55
+P & H He+     CN      N+      C       He             8.80E-10  0.00      0.0     0                   2.28
+01R77 He+     HCN     CN+     H       He             1.46E-09  0.00      0.0     0                   5.14
+01R77 He+     HCN     CH+     N       He             6.20E-10  0.00      0.0     0                   4.33
+01R77 He+     HCN     C+      NH      He             7.75E-10  0.00      0.0     0                   3.46
+01R77 He+     HCN     N+      CH      He             2.48E-10  0.00      0.0     0                   0.44
+01R77 He+     HNC     CN+     H       He             1.55E-09  0.00      0.0     0                   5.81
+01R77 He+     HNC     C+      NH      He             1.55E-09  0.00      0.0     0                   4.13
+02R77 He+     N2      N+      N       He             7.92E-10  0.00      0.0     0                   0.29
+02R77 He+     N2      N2+     He                     4.08E-10  0.00      0.0     0                   9.01
+02R77 He+     NO      N+      O       He             1.38E-09  0.00      0.0     0                   3.55
+02R77 He+     NO      O+      N       He             2.24E-10  0.00      0.0     0                   4.46
+P & H H3+     NH      NH2+    H2                     1.30E-09  0.00      0.0     0                   2.27
+P & H H3+     NH2     NH3+    H2                     1.80E-09  0.00      0.0     0                   3.74
+ 5Z89 H3+     NH3     NH4+    H2                     9.10E-09  0.00      0.0     0                   4.54
+      H3+     N       NH2+    H                      4.50E-20  0.00      0.0     0                   1.01
+P & H H3+     CN      HCN+    H2                     1.00E-09  0.00      0.0     0                   0.96
+P & H H3+     CN      H2CN+   H                      1.00E-09  0.00      0.0     0                   3.93
+12R85 H3+     HCN     H2CN+   H2                     9.50E-09  0.00      0.0     0                   3.10
+12R85 H3+     HNC     H2CN+   H2                     9.50E-09  0.00      0.0     0                   3.77
+ 5Z89 H3+     N2      N2H+    H2                     1.30E-09  0.00      0.0     0                   0.76
+08R82 H3+     NO      HNO+    H2                     1.10E-09  0.00      0.0     0                   1.29
+19R80 H3O+    NH3     NH4+    H2O                    2.20E-09  0.00      0.0     0                   1.73
+      H3O+    CN      H2CN+   OH                     4.50E-09  0.00      0.0     0                   0.47
+19R78 H3O+    HCN     H2CN+   H2O                    4.50E-09  0.00      0.0     0                   0.28
+19R78 H2CN+   H2O     H3O+    HCN                    4.50E-09  0.00   2460.0     0                  -0.28
+19R78 H3O+    HNC     H2CN+   H2O                    4.50E-09  0.00      0.0     0                   0.96
+19R78 H2CN+   H2O     H3O+    HNC                    4.50E-09  0.00  10300.0     0                  -0.96
+P & H HCO+    NH      NH2+    CO                     6.40E-10  0.00      0.0     0                   0.51
+P & H NH2+    CO      HCO+    NH                     6.40E-10  0.00   6100.0     0                  -0.51
+P & H HCO+    NH2     NH3+    CO                     8.90E-10  0.00      0.0     0                   1.99
+05R78 HCO+    NH3     NH4+    CO                     1.90E-09  0.00      0.0     0                   2.78
+12R85 HCO+    HCN     H2CN+   CO                     3.70E-09  0.00      0.0     0                   1.34
+12R85 HCO+    HNC     H2CN+   CO                     3.70E-09  0.00      0.0     0                   2.02
+04R71 HCO2+   NO      HNO+    CO2                    1.00E-10  0.00      0.0     0                  -0.02
+P & H C+      NH      CN+     H                      7.80E-10  0.00      0.0     0                   1.68
+P & H C+      NH2     HCN+    H                      1.10E-09  0.00      0.0     0                   3.39
+05R79 C+      NH3     NH3+    C                      5.29E-10  0.00      0.0     0                   1.11
+05R79 C+      NH3     H2NC+   H                      7.80E-10  0.00      0.0     0                   4.50
+05R79 C+      NH3     H2CN+   H                      7.80E-10  0.00      0.0     0                   6.19
+05R79 C+      NH3     HCN+    H2                     2.08E-10  0.00      0.0     0                   3.23
+12R85 C+      HCN     C2N+    H                      3.40E-09  0.00      0.0     0                   0.02
+12R85 C+      HNC     C2N+    H                      3.40E-09  0.00      0.0     0                   0.70
+09R84 C+      NO      NO+     C                      3.40E-09  0.00      0.0     0                   1.99
+09R84 C+      NO      N+      CO                     9.02E-10  0.00      0.0     0                   1.33
+09R84 N+      CO      C+      NO                     9.02E-10  0.00  15400.0     0                  -1.33
+17R77 O2+     N       NO+     O                      7.84E-11  0.00      0.0     0                   4.19
+18R83 O2+     NH3     NH3+    O2                     2.00E-09  0.00      0.0     0                   1.92
+08R78 O2+     NO      NO+     O2                     4.40E-10  0.00      0.0     0                   2.80
+P & H CH2+    N       HCN+    H                      9.40E-10  0.00      0.0     0                   1.99
+P & H C2H+    N       C2N+    H                      8.30E-10  0.00      0.0     0                   2.38
+P & H CH3+    N       HCN+    H2                     6.70E-11  0.00      0.0     0                   1.24
+  M88 CH3+    N       H2CN+   H                      6.70E-11  0.00      0.0     0                   4.20
+  M88 C2H2+   N       CH+     HCN                    2.50E-11  0.00      0.0     0                   0.46
+  M88 C2H2+   N       CH+     HNC                    2.50E-11  0.00   2600.0     0                  -0.22
+  M88 C2H2+   N       C2N+    H2                     2.25E-10  0.00      0.0     0                   0.87
+17R80 N+      O2      O2+     N                      2.81E-10  0.00      0.0     0                   2.46
+17R80 N+      O2      NO+     O                      2.37E-10  0.00      0.0     0                   6.65
+17R80 N+      O2      O+      NO                     3.30E-11  0.00      0.0     0                   2.31
+09R84 N+      CO      CO+     N                      8.25E-10  0.00      0.0     0                   0.52
+09R84 N+      CO      NO+     C                      1.46E-10  0.00      0.0     0                   0.66
+10R80 N+      NO      NO+     N                      4.51E-10  0.00      0.0     0                   5.26
+10R80 N+      NO      N2+     O                      7.95E-11  0.00      0.0     0                   2.21
+13R83 NH3+    H2O     NH4+    OH                     2.50E-10  0.00      0.0     0                   0.33
+13R83 NH4+    OH      NH3+    H2O                    2.50E-10  0.00   3400.0     0                  -0.33
+06R80 N2H+    O       OH+     N2                     1.40E-10  0.00   3400.0     0                  -0.12
+08R82 N2H+    H2O     H3O+    N2                     2.60E-09  0.00      0.0     0                   2.06
+06R80 N2H+    CO      HCO+    N2                     8.80E-10  0.00      0.0     0                   1.00
+06R80 HCO+    N2      N2H+    CO                     8.80E-10  0.00  11200.0     0                  -1.00
+08R82 N2H+    CO2     HCO2+   N2                     1.40E-09  0.00      0.0     0                   0.54
+08R82 HCO2+   N2      N2H+    CO2                    1.40E-09  0.00   6400.0     0                  -0.54
+15R74 N2H+    NH3     NH4+    N2                     2.30E-09  0.00      0.0     0                   3.78
+15R74 NH4+    N2      N2H+    NH3                    2.30E-09  0.00  44000.0     0                  -3.78
+08R82 N2H+    NO      HNO+    N2                     3.40E-10  0.00      0.0     0                   0.53
+01R83 C2N+    NH3     N2H+    C2H2                   1.90E-10  0.00      0.0     0                   4.20
+01R83 C2N+    NH3     H2CN+   HCN                    1.70E-09  0.00      0.0     0                   6.17
+P & H HNO+    C       CH+     NO                     1.00E-09  0.00      0.0     0                   0.79
+04R71 HNO+    CO      HCO+    NO                     1.00E-10  0.00      0.0     0                   0.47
+04R71 HNO+    CO2     HCO2+   NO                     1.00E-10  0.00      0.0     0                   0.02
+P & H HNO+    OH      H2O+    NO                     6.20E-10  0.00      0.0     0                   0.47
+08R82 HNO+    H2O     H3O+    NO                     2.30E-09  0.00      0.0     0                   1.53
+P & H NO+     Fe      Fe+     NO                     1.00E-09  0.00      0.0     0                   1.40
+P & H N+      ELECTR  N       PHOTON                 3.80E-12 -0.62      0.0     4                   0.00
+P & H NH+     ELECTR  N       H                      2.00E-07 -0.50      0.0     0                  10.27
+P & H NH2+    ELECTR  NH      H                      1.50E-07 -0.50      0.0     0                   6.98
+P & H NH2+    ELECTR  N       H       H              1.50E-07 -0.50      0.0     0                   3.77
+22Z90 NH3+    ELECTR  NH2     H                      3.00E-07 -0.50      0.0     0                   5.51
+22Z90 NH4+    ELECTR  NH2     H2                     7.60E-07 -0.50      0.0     0                   4.54
+22Z90 NH4+    ELECTR  NH3     H                      7.60E-07 -0.50      0.0     0                   4.71
+P & H CN+     ELECTR  C       N                      1.80E-07 -0.50      0.0     0                   6.37
+75 88 C2N+    ELECTR  C2      N                      1.00E-07 -0.50      0.0     0                   4.30
+75 88 C2N+    ELECTR  CN      C                      2.00E-07 -0.50      0.0     0                   5.93
+75 88 HCN+    ELECTR  CN      H                      1.50E-07 -0.50      0.0     0                   8.29
+75 88 HCN+    ELECTR  CH      N                      1.50E-07 -0.50      0.0     0                   3.98
+22Z90 N2+     ELECTR  N       N                      3.60E-08 -0.42      0.0     0                   5.82
+ 6Z88 N2H+    ELECTR  N2      H                      1.70E-07 -1.00      0.0     0                   8.49
+ 7Z88 H2CN+   ELECTR  HCN     H                      1.75E-07 -0.50      0.0     0                   6.16
+ 7Z88 H2CN+   ELECTR  HNC     H                      1.75E-07 -0.50      0.0     0                   5.48
+ 7Z88 H2NC+   ELECTR  HNC     H                      1.75E-07 -0.50      0.0     0                   7.17
+ 7Z88 H2NC+   ELECTR  NH2     C                      1.75E-07 -0.50      0.0     0                   2.12
+22Z90 NO+     ELECTR  N       O                      4.30E-07 -0.37      0.0     0                   2.77
+P & H HNO+    ELECTR  NO      H                      3.00E-07 -0.50      0.0     0                   7.97
+PDRrf S       H2      SH      H                      4.20E-10  0.00  10494.0     0                  -0.81
+PDRrf SH      H2      H       H2S                    7.36E-13  2.31   6862.0     0                  -0.64
+PDRrf SH      H       S       H2                     1.39E-10 -0.18    697.0     0                   0.81
+PDRrf H2S     H       SH      H2                     3.70E-12  1.94    455.0     0                   0.64
+16Z88 SO      H       OH      S                      5.90E-10 -0.31  11100.0     0                  -0.95
+16Z88 SO2     H       SO      OH                     9.25E-09 -0.74  14700.0     0                  -1.26
+16Z88 OCS     H       SH      CO                     1.70E-11  0.00   2000.0     0                   0.53
+UMIST SH      O       SO      H                      1.58E-10  0.00      0.0     0                   1.68
+17Z88 SH      O       OH      S                      1.70E-11  0.67    950.0     0                   0.73
+PDRrf H2S     O       SH      OH                     7.90E-12  1.00   1737.0     0                   0.56
+16Z88 H2S     OH      SH      H2O                    6.30E-12  0.00     80.0     0                   1.28
+16Z88 CS      O       CO      S                      2.70E-10  0.00    760.0     0                   3.62
+16Z88 CS      OH      OCS     H                      1.55E-13  1.12    800.0     0                   2.37
+24Z87 S       O2      SO      O                      5.19E-12  0.00    265.0     0                   0.24
+16Z88 SO      O       S       O2                     6.60E-13  0.00   2760.0     0                  -0.24
+16Z88 SO      O2      SO2     O                      1.40E-12  0.00   2820.0     0                   0.54
+23Z90 SO      OH      SO2     H                      1.96E-10 -0.17      0.0     0                   1.26
+UMIST SO      N       NO      S                      1.73E-11  0.50    750.0     0                   1.16
+16Z88 SO      C       CO      S                      7.20E-11  0.00      0.0     0                   5.76
+16Z88 SO      C       CS      O                      1.70E-10  0.00      0.0     0                   2.13
+16Z88 SO2     O       SO      O2                     9.27E-11 -0.46   9140.0     0                  -0.54
+16Z88 OCS     O       SO      CO                     2.60E-11  0.00   2250.0     0                   2.21
+16Z88 CH      S       CS      H                      1.10E-12  0.00      0.0     0                   4.01
+16Z88 CH      S       SH      C                      1.73E-11  0.50   4000.0     0                   0.20
+16Z88 OH      S       SO      H                      6.59E-11  0.00      0.0     0                   0.95
+16Z88 SH      C       CS      H                      2.00E-11  0.00      0.0     0                   3.81
+16Z88 SH      C       CH      S                      1.20E-11  0.58   5880.0     0                  -0.20
+16Z88 SH      CO      OCS     H                      5.95E-14  1.12   8330.0     0                  -0.53
+18Z86 S+      H2      SH+     H                      2.20E-10  0.00   9860.0     0                  -0.84
+PDRrf S+      H2      H2S+    PHOTON                 1.00E-17 -0.20      0.0     0                   0.00
+18Z86 SH+     H2      H2S+    H                      1.90E-10  0.00   6380.0     0                  -0.73
+P & H SH+     H2      H3S+    PHOTON                 2.40E-16 -0.80      0.0     0                   0.00
+18Z86 H2S+    H2      H3S+    H                      1.40E-11  0.00   2900.0     0                  -0.20
+ 1R84 CS+     H2      HCS+    H                      4.50E-10  0.00      0.0     0                   1.27
+18Z86 SH+     H       S+      H2                     1.10E-10  0.00      0.0     0                   0.84
+18Z86 H2S+    H       SH+     H2                     2.00E-10  0.00      0.0     0                   0.73
+18Z86 H3S+    H       H2S+    H2                     6.00E-11  0.00      0.0     0                   0.20
+P & H SO+     H       S+      OH                     6.10E-10  0.00  11385.0     0                  -0.97
+GUESS H+      S       S+      H                      1.00E-15  0.00      0.0     0                   3.26
+P & H H+      SH      SH+     H                      1.60E-09  0.00      0.0     0                   3.22
+P & H H+      SH      S+      H2                     1.60E-09  0.00      0.0     0                   4.07
+P & H H+      H2S     H2S+    H                      7.60E-09  0.00      0.0     0                   3.14
+P & H H+      CS      CS+     H                      4.90E-09  0.00      0.0     0                   2.28
+P & H H+      SO      SO+     H                      3.20E-09  0.00      0.0     0                   3.28
+P & H H+      OCS     SH+     CO                     5.90E-09  0.00      0.0     0                   3.76
+P & H H3+     S       SH+     H2                     2.60E-09  0.00      0.0     0                   2.55
+P & H H3+     SH      H2S+    H2                     1.90E-09  0.00      0.0     0                   2.63
+P & H H3+     H2S     H3S+    H2                     3.70E-09  0.00      0.0     0                   3.07
+P & H H3+     CS      HCS+    H2                     2.90E-09  0.00      0.0     0                   3.69
+P & H H3+     SO      HSO+    H2                     1.90E-09  0.00      0.0     0                   2.44
+ 8R82 H3+     SO2     HSO2+   H2                     1.30E-09  0.00      0.0     0                   2.24
+ 8R82 H3+     OCS     HOCS+   H2                     1.90E-09  0.00      0.0     0                   2.17
+P & H He+     SH      S+      H       He             1.70E-09  0.00      0.0     0                  10.58
+P & H He+     H2S     S+      H2      He             3.60E-09  0.00      0.0     0                  11.22
+P & H He+     H2S     SH+     H       He             4.80E-10  0.00      0.0     0                  10.38
+P & H He+     H2S     H2S+    He                     3.10E-10  0.00      0.0     0                  14.13
+P & H He+     CS      C+      S       He             1.30E-09  0.00      0.0     0                   5.84
+P & H He+     CS      S+      C       He             1.30E-09  0.00      0.0     0                   6.77
+P & H He+     SO      O+      S       He             8.30E-10  0.00      0.0     0                   5.62
+P & H He+     SO      S+      O       He             8.30E-10  0.00      0.0     0                   8.90
+P & H He+     OCS     CS+     O       He             7.60E-10  0.00      0.0     0                   6.51
+P & H He+     OCS     S+      CO      He             7.60E-10  0.00      0.0     0                  11.11
+P & H He+     OCS     CO+     S       He             7.60E-10  0.00      0.0     0                   7.43
+P & H He+     OCS     O+      CS      He             7.60E-11  0.00      0.0     0                   4.21
+ 2R73 He+     SO2     S+      O2      He             8.60E-10  0.00      0.0     0                   8.36
+ 2R73 He+     SO2     SO+     O       He             3.44E-09  0.00      0.0     0                   8.61
+P & H C+      S       S+      C                      1.50E-09  0.00      0.0     0                   0.92
+P & H C+      SH      CS+     H                      1.10E-09  0.00      0.0     0                   3.76
+ 3R78 C+      H2S     HCS+    H                      1.28E-09  0.00      0.0     0                   5.67
+ 3R78 C+      H2S     H2S+    C                      4.25E-10  0.00      0.0     0                   0.80
+P & H C+      CS      CS+     C                      1.60E-09  0.00    700.0     0                  -0.06
+P & H C+      SO      S+      CO                     2.60E-10  0.00      0.0     0                   6.68
+P & H C+      SO      CS+     O                      2.60E-10  0.00      0.0     0                   2.08
+P & H C+      SO      SO+     C                      2.60E-10  0.00      0.0     0                   0.94
+P & H C+      SO      CO+     S                      2.60E-10  0.00      0.0     0                   3.01
+P & H C+      OCS     CS+     CO                     1.60E-09  0.00      0.0     0                   4.29
+P & H C+      SO2     SO+     CO                     2.30E-09  0.00      0.0     0                   6.39
+P & H CH+     S       S+      CH                     4.70E-10  0.00      0.0     0                   0.30
+P & H CH+     S       SH+     C                      4.70E-10  0.00      0.0     0                   0.47
+P & H CH+     S       CS+     H                      4.70E-10  0.00      0.0     0                   3.34
+19Z82 CH+     SO      OH+     CS                     1.00E-09  0.00      0.0     0                   0.69
+19Z82 CH+     SO      SH+     CO                     1.00E-09  0.00      0.0     0                   6.23
+P & H CH3+    S       HCS+    H2                     1.40E-09  0.00      0.0     0                   3.67
+P & H CH3+    SO      HOCS+   H2                     9.50E-10  0.00      0.0     0                   3.56
+P & H CH5+    S       SH+     CH4                    1.30E-09  0.00      0.0     0                   1.12
+P & H H3O+    S       SH+     H2O                    3.20E-10  0.00   4930.0     0                  -0.26
+ 4R79 H3O+    H2S     H3S+    H2O                    1.90E-09  0.00      0.0     0                   0.25
+P & H HCO+    S       SH+     CO                     3.30E-10  0.00      0.0     0                   0.79
+P & H HCO+    SH      H2S+    CO                     8.20E-10  0.00      0.0     0                   0.87
+P & H HCO+    CS      HCS+    CO                     1.20E-09  0.00      0.0     0                   1.93
+P & H HCO+    SO      HSO+    CO                     7.50E-10  0.00      0.0     0                   0.68
+ 7R75 HCO+    H2S     H3S+    CO                     1.60E-09  0.00      0.0     0                   1.31
+ 5R78 HCO+    OCS     HOCS+   CO                     1.10E-09  0.00      0.0     0                   0.41
+P & H O2+     S       SO+     O                      5.40E-10  0.00      0.0     0                   1.99
+P & H O2+     S       S+      O2                     5.40E-10  0.00      0.0     0                   1.73
+P & H O2+     H2S     H2S+    O2                     1.40E-09  0.00      0.0     0                   1.61
+P & H S+      CH      CS+     H                      6.20E-10  0.00      0.0     0                   3.03
+P & H S+      CH2     HCS+    H                      1.00E-11  0.00      0.0     0                   4.48
+P & H S+      OH      SO+     H                      6.10E-10  0.00      0.0     0                   0.97
+P & H S+      OH      SH+     O                      2.90E-10  0.00   8820.0     0                  -0.76
+P & H S+      SH      SH+     S                      9.70E-10  0.00    350.0     0                  -0.03
+ 1R84 S+      NO      NO+     S                      3.20E-10  0.00      0.0     0                   1.06
+10R81 S+      NH3     NH3+    S                      1.60E-09  0.00      0.0     0                   0.18
+ 1R84 S+      O2      SO+     O                      2.30E-11  0.00      0.0     0                   0.25
+ 5R84 NH3+    H2S     NH4+    SH                     6.00E-10  0.00      0.0     0                   1.61
+P & H HNO+    S       SH+     NO                     1.10E-09  0.00      0.0     0                   1.26
+P & H N2H+    S       SH+     N2                     1.10E-09  0.00      0.0     0                   1.79
+P & H SH+     O       SO+     H                      2.90E-10  0.00      0.0     0                   1.73
+P & H SH+     O       S+      OH                     2.90E-10  0.00      0.0     0                   0.76
+P & H SH+     S       S+      SH                     9.70E-10  0.00      0.0     0                   0.03
+P & H SH+     C       CS+     H                      9.90E-10  0.00      0.0     0                   2.87
+P & H SH+     CH      CH2+    S                      5.80E-10  0.00      0.0     0                   0.73
+P & H SH+     OH      H2S+    O                      3.10E-10  0.00   7500.0     0                  -0.65
+P & H SH+     OH      H2O+    S                      4.30E-10  0.00   9200.0     0                  -0.79
+10R81 SH+     H2O     H3O+    S                      6.30E-10  0.00      0.0     0                   0.26
+10R81 SH+     H2S     H2S+    SH                     5.00E-10  0.00   1000.0     0                  -0.09
+10R81 SH+     H2S     H3S+    S                      5.00E-10  0.00      0.0     0                   0.52
+ 1R84 SH+     NO      NO+     SH                     3.30E-10  0.00      0.0     0                   1.10
+10R81 SH+     NH3     NH3+    SH                     5.25E-10  0.00      0.0     0                   0.22
+10R81 SH+     NH3     NH4+    S                      9.75E-10  0.00      0.0     0                   1.99
+P & H H2S+    O       SH+     OH                     3.10E-10  0.00      0.0     0                   0.65
+P & H H2S+    O       SO+     H2                     3.10E-10  0.00      0.0     0                   2.46
+P & H H2S+    C       HCS+    H                      1.00E-09  0.00      0.0     0                   4.87
+P & H H2S+    S       S+      H2S                    1.10E-09  0.00      0.0     0                   0.12
+10R81 H2S+    SH      SH+     H2S                    5.00E-10  0.00      0.0     0                   0.09
+10R81 H2S+    NO      NO+     H2S                    3.70E-10  0.00      0.0     0                   1.19
+10R81 H2S+    H2O     H3O+    SH                     8.10E-10  0.00      0.0     0                   0.19
+10R81 H2S+    NH3     NH4+    SH                     1.36E-09  0.00      0.0     0                   1.91
+10R81 H2S+    NH3     NH3+    H2S                    3.40E-10  0.00      0.0     0                   0.30
+10R81 H3S+    NH3     NH4+    H2S                    1.90E-09  0.00      0.0     0                   1.47
+13R78 H3S+    HCN     H2CN+   H2S                    1.90E-09  0.00      0.0     0                   0.03
+19Z82 HCS+    O       HCO+    S                      1.00E-09  0.00      0.0     0                   1.69
+P & H SO+     NH3     NH3+    SO                     1.30E-09  0.00      0.0     0                   0.16
+P & H S+      Fe      Fe+     S                      1.80E-10  0.00      0.0     0                   2.47
+P & H SH+     Fe      Fe+     SH                     1.60E-09  0.00      0.0     0                   2.50
+P & H SO+     Fe      Fe+     SO                     1.60E-09  0.00      0.0     0                   2.45
+P & H H2S+    Fe      Fe+     H2S                    1.80E-09  0.00      0.0     0                   2.59
+P & H S+      ELECTR  S       PHOTON                 3.90E-12 -0.63      0.0     4                   0.00
+P & H SH+     ELECTR  S       H                      2.00E-07 -0.50      0.0     0                   6.70
+PDRrf H2S+    ELECTR  SH      H                      2.40E-07 -0.72      0.0     0                   6.62
+PDRrf H2S+    ELECTR  S       H       H              2.40E-07 -0.72      0.0     0                   2.95
+P & H H2S+    ELECTR  H2S     PHOTON                 1.10E-10 -0.70      0.0     4                   0.00
+PDRrf H3S+    ELECTR  H2S     H                      8.84E-08 -0.50      0.0     0                   6.18
+PDRrf H3S+    ELECTR  SH      H       H              3.02E-07 -0.50      0.0     0                   2.35
+PDRrf H3S+    ELECTR  SH      H2                     7.80E-08 -0.50      0.0     0                   6.83
+PDRrf H3S+    ELECTR  S       H2      H              5.20E-08 -0.50      0.0     0                   3.16
+P & H CS+     ELECTR  C       S                      2.00E-07 -0.50      0.0     0                   3.83
+PDRrf HCS+    ELECTR  CS      H                      1.84E-07 -0.57      0.0     0                   5.57
+PDRrf HCS+    ELECTR  CH      S                      7.86E-07 -0.57      0.0     0                   1.55
+P & H SO+     ELECTR  S       O                      2.00E-07 -0.50      0.0     0                   4.97
+P & H HSO+    ELECTR  SO      H                      2.00E-07 -0.50      0.0     0                   6.82
+UMIST HSO2+   ELECTR  SO      H       O              1.00E-07 -0.50      0.0     0                   1.35
+UMIST HSO2+   ELECTR  SO      OH                     1.00E-07 -0.50      0.0     0                   5.75
+P & H HOCS+   ELECTR  OH      CS                     2.00E-07 -0.50      0.0     0                   4.72
+P & H HOCS+   ELECTR  OCS     H                      2.00E-07 -0.50      0.0     0                   7.08
+McKay SiH4    H       SiH3    H2                     2.60E-11  0.00   1400.0     0                   0.61
+McKay SiH3    H       SiH2    H2                     2.00E-11  0.00      0.0     0                   1.35
+McKay SiH2    H       SiH     H2                     2.00E-11  0.00      0.0     0                   1.35
+McKay SiH     H       Si      H2                     2.00E-11  0.00      0.0     0                   1.50
+McKay SiH2    O2      SiO     H2O                    7.50E-12  0.00      0.0     0                   6.53
+McKay SiH     O2      SiO     OH                     1.70E-10  0.00      0.0     0                   4.54
+UMIST SiH2    O       SiO     H       H              5.00E-11  0.50      0.0     0                   2.13
+UMIST SiH     O       SiO     H                      4.00E-11  0.50      0.0     0                   5.26
+ROW01 Si      O2      SiO     O                      1.72E-10 -0.53     17.0     0                   3.12
+ROW01 Si      OH      SiO     H                      1.72E-10 -0.53     17.0     0                   3.84
+HRBST SiO     OH      SiO2    H                      1.00E-12 -0.70      0.0     0                   0.27
+ 2063 Si+     H2      SiH2+   PHOTON                 3.00E-18  0.00      0.0     0                   0.00
+ 2227 SiH+    H2      SiH3+   PHOTON                 3.00E-17 -1.00      0.0     0                   0.00
+ 2459 SiH3+   H2      SiH5+   PHOTON                 1.00E-18 -0.50      0.0     0                   0.00
+ 1724 Si+     H2      SiH+    H                      1.50E-10  0.00  14310.0     0                  -1.23
+27B77 SiH+    H2      SiH2+   H                      1.20E-09  0.00  28250.0     0                  -2.44
+28B75 SiH2+   H2      SiH3+   H                      7.00E-10  0.00   6335.0     0                  -0.55
+28B75 SiH3+   H2      SiH4+   H                      2.00E-10  0.00  47390.0     0                  -4.09
+ 2570 SiH4+   H2      SiH5+   H                      1.00E-09  0.00      0.0     0                   0.39
+ 2223 SiH+    H       Si+     H2                     1.90E-09  0.00      0.0     0                   1.23
+27B77 SiH2+   H       SiH+    H2                     1.20E-09  0.00      0.0     0                   2.44
+28B75 SiH3+   H       SiH2+   H2                     7.00E-10  0.00      0.0     0                   0.55
+28B75 SiH4+   H       SiH3+   H2                     2.00E-10  0.00      0.0     0                   4.09
+28B75 SiH5+   H       SiH4+   H2                     4.00E-11  0.00   4470.0     0                  -0.39
+ 2791 SiO+    H2      SiOH+   H                      3.20E-10  0.00      0.0     0                   0.00
+ 383  H+      Si      Si+     H                      9.90E-10  0.00      0.0     0                   5.43
+ 411  H+      SiH     SiH+    H                      1.70E-09  0.00      0.0     0                   5.70
+ 412  H+      SiH     Si+     H2                     1.70E-09  0.00      0.0     0                   6.93
+ 419  H+      SiH2    SiH2+   H                      1.50E-09  0.00      0.0     0                   4.61
+ 420  H+      SiH2    SiH+    H2                     1.50E-09  0.00      0.0     0                   7.05
+ 425  H+      SiH3    SiH3+   H                      1.50E-09  0.00      0.0     0                   5.41
+ 426  H+      SiH3    SiH2+   H2                     1.50E-09  0.00      0.0     0                   5.96
+ 429  H+      SiH4    SiH4+   H                      1.50E-09  0.00      0.0     0                   1.94
+ 430  H+      SiH4    SiH3+   H2                     1.50E-09  0.00      0.0     0                   6.02
+ 461  H+      SiO     SiO+    H                      3.30E-09  0.00      0.0     0                   2.16
+ 759  He+     Si      Si+     He                     3.30E-09  0.00      0.0     0                  16.42
+ 812  He+     SiH     Si+     H       He             1.80E-09  0.00      0.0     0                  13.44
+ 821  He+     SiH2    SiH+    H       He             1.00E-09  0.00      0.0     0                  13.56
+ 822  He+     SiH2    Si+     H2      He             1.00E-09  0.00      0.0     0                  14.79
+ 829  He+     SiH3    SiH2+   H       He             1.00E-09  0.00      0.0     0                  12.47
+ 830  He+     SiH3    SiH+    H2      He             1.00E-09  0.00      0.0     0                  14.90
+ 834  He+     SiH4    SiH3+   H       He             1.00E-09  0.00      0.0     0                  12.53
+ 835  He+     SiH4    SiH2+   H2      He             1.00E-09  0.00      0.0     0                  13.08
+ 879  He+     SiO     Si+     O       He             8.60E-10  0.00      0.0     0                   8.18
+ 880  He+     SiO     O+      Si      He             8.60E-10  0.00      0.0     0                   2.73
+L&G90 He+     SiO2    SiO+    O       He             5.00E-10  0.00      0.0     0                   8.48
+L&G90 He+     SiO2    Si+     O2      He             5.00E-10  0.00      0.0     0                   8.63
+ 1033 C+      Si      Si+     C                      2.10E-09  0.00      0.0     0                   3.10
+ 1072 C+      SiH2    SiH2+   C                      1.00E-09  0.00      0.0     0                   2.28
+ 1078 C+      SiH3    SiH3+   C                      1.00E-09  0.00      0.0     0                   3.08
+ 1125 C+      SiO     Si+     CO                     5.40E-10  0.00      0.0     0                   5.97
+L&G90 C+      SiO2    SiO+    CO                     1.00E-09 -0.60      0.0     0                   6.26
+ 2471 S+      Si      Si+     S                      1.60E-09  0.00      0.0     0                   2.17
+ 2489 S+      SiH     SiH+    S                      4.20E-10  0.00      0.0     0                   2.44
+ 618  H3+     Si      SiH+    H2                     2.00E-09  0.00      0.0     0                   4.33
+ 644  H3+     SiH     SiH2+   H2                     2.00E-09  0.00      0.0     0                   3.40
+      H3+     Si      SiH2+   H                      1.70E-09  0.00      0.0     0                   1.90
+ 648  H3+     SiH2    SiH3+   H2                     2.00E-09  0.00      0.0     0                   4.20
+ 652  H3+     SiH3    SiH4+   H2                     2.00E-09  0.00      0.0     0                   1.46
+ 654  H3+     SiH4    SiH5+   H2                     2.00E-09  0.00      0.0     0                   2.46
+ 680  H3+     SiO     SiOH+   H2                     2.00E-09  0.00      0.0     0                   0.00
+ 1731 H3O+    Si      SiH+    H2O                    1.80E-09  0.00      0.0     0                   1.52
+ 1745 H3O+    SiH     SiH2+   H2O                    9.70E-10  0.00      0.0     0                   0.58
+ 1746 H3O+    SiH2    SiH3+   H2O                    2.00E-09  0.00      0.0     0                   1.38
+ 1764 H3O+    SiO     SiOH+   H2O                    2.00E-09  0.00      0.0     0                   0.00
+ 2258 HCO+    Si      SiH+    CO                     1.60E-09  0.00      0.0     0                   2.57
+ 2279 HCO+    SiH     SiH2+   CO                     8.70E-10  0.00      0.0     0                   1.64
+ 2283 HCO+    SiH2    SiH3+   CO                     2.00E-09  0.00      0.0     0                   2.44
+ 2286 HCO+    SiH4    SiH5+   CO                     1.40E-09  0.00      0.0     0                   0.70
+ 2305 HCO+    SiO     SiOH+   CO                     7.90E-10  0.00      0.0     0                   0.00
+ 2071 Si+     OH      SiO+    H                      6.30E-10  0.00      0.0     0                   0.57
+L&G90 Si+     H2O     SiOH+   H                      2.30E-10 -0.60      0.0     0                   0.00
+ 2082 Si+     O2      SiO+    O                      1.00E-13  0.00      0.0     0                  -0.15
+ 2226 SiH+    O       SiO+    H                      4.00E-10  0.00      0.0     0                   1.72
+ 2229 SiH+    NH3     NH4+    Si                     1.00E-09  0.00      0.0     0                   0.21
+ 2230 SiH+    H2O     H3O+    Si                     8.00E-10  0.00      0.0     0                  -1.52
+ 2391 SiH2+   O       SiOH+   H                      6.30E-10  0.00      0.0     0                   0.00
+ 2393 SiH2+   O2      SiOH+   OH                     2.40E-11  0.00      0.0     0                   0.00
+ 2458 SiH3+   O       SiOH+   H2                     2.00E-10  0.00      0.0     0                   0.00
+ 2571 SiH4+   H2O     H3O+    SiH3                   2.00E-09  0.00      0.0     0                   1.36
+ 2572 SiH4+   CO      HCO+    SiH3                   1.00E-09  0.00      0.0     0                   0.30
+ 2623 SiH5+   H2O     H3O+    SiH4                   2.00E-09  0.00      0.0     0                   0.36
+ 3116 Si+     ELECTR  Si      PHOTON                 4.90E-12 -0.60      0.0     4                   0.00
+ 3125 SiH+    ELECTR  Si      H                      2.00E-07 -0.50      0.0     0                   4.92
+ 3135 SiH2+   ELECTR  Si      H       H              2.00E-07 -0.50      0.0     0                   2.88
+ 3136 SiH2+   ELECTR  SiH     H                      1.50E-07 -0.50      0.0     0                   5.86
+ 3137 SiH2+   ELECTR  Si      H2                     1.50E-07 -0.50      0.0     0                   7.36
+ 3146 SiH3+   ELECTR  SiH2    H                      1.50E-07 -0.50      0.0     0                   5.05
+ 3147 SiH3+   ELECTR  SiH     H2                     1.50E-07 -0.50      0.0     0                   6.40
+ 3156 SiH4+   ELECTR  SiH3    H                      1.50E-07 -0.50      0.0     0                   7.79
+ 3157 SiH4+   ELECTR  SiH2    H2                     1.50E-07 -0.50      0.0     0                   9.14
+ 3163 SiH5+   ELECTR  SiH4    H                      1.50E-07 -0.50      0.0     0                   6.80
+ 3164 SiH5+   ELECTR  SiH3    H2                     1.50E-07 -0.50      0.0     0                   7.41
+ 3227 SiO+    ELECTR  Si      O                      2.00E-07 -0.50      0.0     0                   3.20
+ 3247 SiOH+   ELECTR  SiO     H                      1.50E-07 -0.50      0.0     0                   0.00
+ 3248 SiOH+   ELECTR  Si      OH                     1.50E-07 -0.50      0.0     0                   0.00
+jan11 CO      H2      H       HCO                    3.76E-10  0.70  44246.0     0                   0.00
+jan11 HCO     H       CO      H2                     3.32E-10  0.00      0.0     0                   0.00
+jan11 HCO     H2      H2CO    H                      2.70E-13  2.00   8973.0     0                   0.00
+jan11 HCO     O       OH      CO                     5.00E-11  0.00      0.0     0                   0.00
+jan11 HCO     O       H       CO2                    5.00E-11  0.00      0.0     0                   0.00
+jan11 HCO     O       CH      O2                     1.62E-11  0.18  36830.0     0                   0.00
+jan11 CH2     O       HCO     H                      5.00E-11  0.00      0.0     0                   0.00
+jan11 CH      O2      HCO     O                      7.11E-12  0.42     40.0     0                   0.00
+jan11 C2H2    O2      HCO     HCO                    6.64E-12  0.00  14092.0     0                   0.00
+jan11 CH3     O2      HCO     H2O                    3.54E-12  0.00   1459.0     0                   0.00
+jan11 H2CO    H       O       CH3                    3.37E-09 -0.22  34645.0     0                   0.00
+jan11 H2CO    H       OH      CH2                    2.78E-08 -0.76  38861.0     0                   0.00
+jan11 H2CO    H       HCO     H2                     4.27E-12  1.45   1334.0     0                   0.00
+jan11 H2CO    H2      OH      CH3                    2.60E-13 -0.19  37889.0     0                   0.00
+jan11 H2CO    O       O2      CH2                    1.43E-11 -0.37  30444.0     0                   0.00
+jan11 H2CO    O       HCO     OH                     1.78E-11  0.57   1390.0     0                   0.00
+jan11 H2CO    CO      HCO     HCO                    1.63E-09  0.39  36440.0     0                   0.00
+jan11 CH3     O       H2CO    H                      1.40E-10  0.00      0.0     0                   0.00
+jan11 CH2     O2      H2CO    O                      4.82E-13  0.00      0.0     0                   0.00
+jan11 CH3     O2      H2CO    OH                     1.74E-13  0.00   2693.0     0                   0.00
+jan11 CH3OH   H       CH3     H2O                    4.56E-16  3.26   1616.0     0                   0.00
+jan11 H+      HCO     CO+     H2                     9.40E-10 -0.50      0.0     0                   0.00
+jan11 H+      HCO     CO      H2+                    9.40E-10 -0.50      0.0     0                   0.00
+jan11 H+      HCO     HCO+    H                      9.40E-10 -0.50      0.0     0                   0.00
+jan11 H3+     HCO     H2CO+   H2                     1.70E-09 -0.50      0.0     0                   0.00
+jan11 He+     HCO     O       CH+     He             4.90E-10 -0.50      0.0     0                   0.00
+jan11 He+     HCO     CO+     He      H              4.90E-10 -0.50      0.0     0                   0.00
+jan11 C+      HCO     CO      CH+                    4.80E-10 -0.50      0.0     0                   0.00
+jan11 C+      HCO     HCO+    C                      4.80E-10 -0.50      0.0     0                   0.00
+jan11 S+      HCO     SH+     CO                     3.60E-10 -0.50      0.0     0                   0.00
+jan11 S+      HCO     S       HCO+                   3.60E-10 -0.50      0.0     0                   0.00
+oh_hb H+      H2CO    HCO+    H2                     4.60E-09 -0.50      0.0     0                   0.00
+oh_hb H+      H2CO    H2CO+   H                      4.60E-09 -0.50      0.0     0                   0.00
+oh_hb H3+     H2CO    H3CO+   H2                     5.50E-09 -0.50      0.0     0                   0.00
+oh_hb He+     H2CO    CO+     H2      He             2.40E-09 -0.50      0.0     0                   0.00
+oh_hb He+     H2CO    HCO+    H       He             2.40E-09 -0.50      0.0     0                   0.00
+um_hb He+     H2CO    H2CO+   He                     9.69E-10  0.00      0.0     0                   0.00
+um_hb He+     H2CO    O       CH2+    He             1.71E-09  0.00      0.0     0                   0.00
+jan11 C+      H2CO    CO      CH2+                   2.34E-09 -0.50      0.0     0                   0.00
+jan11 C+      H2CO    HCO+    CH                     7.80E-10 -0.50      0.0     0                   0.00
+oh_hb S+      H2CO    H2S+    CO                     1.10E-09 -0.50      0.0     0                   0.00
+oh_hb S+      H2CO    HCO+    SH                     1.10E-09 -0.50      0.0     0                   0.00
+jan11 H+      CH3OH   CH3OH+  H                      5.90E-10 -0.50      0.0     0                   0.00
+jan11 H+      CH3OH   H3CO+   H2                     3.84E-09 -0.50      0.0     0                   0.00
+jan11 H+      CH3OH   CH3+    H2O                    5.90E-10 -0.50      0.0     0                   0.00
+jan11 H+      CH3OH   HCO+    H2      H2             8.85E-10 -0.50      0.0     0                   0.00
+oh_hb H3+     CH3OH   CH3+    H2O     H2             1.80E-09 -0.50      0.0     0                   0.00
+oh_hb H3+     CH3OH   H3CO+   H2      H2             1.12E-09 -0.50      0.0     0                   0.00
+oh_hb H3+     CH3OH   CH5O+   H2                     1.04E-09 -0.50      0.0     0                   0.00
+oh_hb He+     CH3OH   OH+     CH3     He             1.70E-09 -0.50      0.0     0                   0.00
+oh_hb He+     CH3OH   CH3+    OH      He             1.70E-09 -0.50      0.0     0                   0.00
+jan11 C+      CH3OH   HCO     CH3+                   2.08E-09 -0.50      0.0     0                   0.00
+jan11 C+      CH3OH   H3CO+   CH                     5.20E-10 -0.50      0.0     0                   0.00
+oh_hb H2CO+   ELECTR  CO      H       H              5.00E-07 -0.50      0.0     0                   0.00
+oh_hb H2CO+   ELECTR  HCO     H                      1.00E-07 -0.50      0.0     0                   0.00
+oh_hb H2CO+   ELECTR  H2CO    PHOTON                 1.10E-10 -0.70      0.0     4                   0.00
+um_hb H3CO+   ELECTR  H2CO    H                      2.00E-07 -0.50      0.0     0                   0.00
+um_hb H3CO+   ELECTR  HCO     H       H              2.00E-07 -0.50      0.0     0                   0.00
+um_hb H3CO+   ELECTR  CO      H2      H              2.00E-07 -0.50      0.0     0                   0.00
+oh_hb CH3OH+  ELECTR  CH3     OH                     3.00E-07 -0.50      0.0     0                   0.00
+oh_hb CH3OH+  ELECTR  H2CO    H2                     3.00E-07 -0.50      0.0     0                   0.00
+oh_hb CH5O+   ELECTR  H2CO    H2      H              9.10E-08 -0.67      0.0     0                   0.00
+oh_hb CH5O+   ELECTR  CH3     H2O                    8.19E-08 -0.67      0.0     0                   0.00
+oh_hb CH5O+   ELECTR  CH3     OH      H              4.64E-07 -0.67      0.0     0                   0.00
+oh_hb CH5O+   ELECTR  CH2     H2O     H              1.91E-07 -0.67      0.0     0                   0.00
+oh_hb CH5O+   ELECTR  CH3OH   H                      2.73E-08 -0.67      0.0     0                   0.00
+REVER OH+     H       H+      OH                     2.10E-09  0.00   6793.7     0   Ê  ’        @ -0.59
+REVER O2+     H       H+      O2                     1.20E-09  0.00  17688.9     0   Ê  ’        @ -1.52
+REVER H2O+    H       H+      H2O                    8.20E-09  0.00  11451.5     0   Ê  ’        @ -0.99
+REVER CH4+    H       H+      CH4                    1.52E-09  0.00  12875.1     0   Ê  ’        @ -1.11
+REVER HCO+    O       H+      CO2                    4.20E-09  0.00   7522.5     0   Ê  ’        @ -0.65
+REVER CO+     H2      H2+     CO                     6.44E-10  0.00  16362.9     0   Ê  ’        @ -1.41
+REVER OH+     H2      H3+     O                      8.00E-10  0.00   7379.2     0   Ê  ’        @ -0.64
+REVER H2O+    H2      H3+     OH                     1.30E-09  0.00  20397.1     0   Ê  ’        @ -1.76
+REVER HCO+    H2      H3+     CO                     1.70E-09  0.00  20371.9     0   Ê  ’        @ -1.76
+REVER HCO2+   H2      H3+     CO2                    2.00E-09  0.00  15107.9     0   Ê  ’        @ -1.30
+REVER CH4+    H2      H3+     CH3                    2.10E-09  0.00  13983.7     0   Ê  ’        @ -1.21
+REVER CH5+    H2      H3+     CH4                    1.90E-09  0.00  16614.4     0   Ê  ’        @ -1.43
+REVER C2+     H       C+      CH                     3.80E-10  0.00  21964.5     0   Ê  ’        @ -1.89
+REVER CH+     C       C+      CH                     3.80E-10  0.00   7203.1     0   Ê  ’        @ -0.62
+REVER CH2+    C       C+      CH2                    5.20E-10  0.00  11378.1     0   Ê  ’        @ -0.98
+REVER OH+     H       O+      H2                     1.20E-09  0.00   6064.3     0   Ê  ’        @ -0.52
+REVER C+      O2      O2+     C                      5.20E-11  0.00   9396.2     0   Ê  ’        @ -0.81
+REVER H2O+    H       OH+     H2                     1.01E-09  0.00  12060.2     0   Ê  ’        @ -1.04
+REVER CH2+    H2O     H3O+    CH                     6.80E-10  0.00   5382.2     0   Ê  ’        @ -0.46
+REVER CH3+    H2O     H3O+    CH2                    9.40E-10  0.00  16096.3     0   Ê  ’        @ -1.39
+REVER H3O+    CH2     CH5+    O                      2.16E-10  0.00  19154.7     0   Ê  ’        @ -1.65
+REVER H3O+    CH4     CH5+    H2O                    3.70E-09  0.00  16031.0     0   Ê  ’        @ -1.38
+REVER H+      CO      CO+     H                      7.50E-10  0.00   4830.9     0   Ê  ’        @ -0.42
+REVER CH+     CO      HCO+    C                      1.10E-09  0.00   3762.5     0   Ê  ’        @ -0.32
+REVER CH2+    CO      HCO+    CH                     6.30E-10  0.00  17655.7     0   Ê  ’        @ -1.52
+REVER H3O+    CO      HCO+    H2O                    2.50E-09  0.00  12273.5     0   Ê  ’        @ -1.06
+REVER CH5+    CO2     HCO2+   CH4                    7.80E-10  0.00   1506.5     0   Ê  ’        @ -0.13
+REVER C2H+    H       C2+     H2                     1.40E-09  0.00  10244.3     0   Ê  ’        @ -0.88
+REVER C2H2+   H       C2H+    H2                     1.70E-09  0.00  17538.0     0   Ê  ’        @ -1.51
+REVER C2+     H       H+      C2                     3.10E-09  0.00  17990.7     0   Ê  ’        @ -1.55
+REVER C2H+    H       H+      C2H                    1.50E-09  0.00  11501.8     0   Ê  ’        @ -0.99
+REVER C2H+    H2      H+      C2H2                   2.00E-09  0.00   8812.7     0   Ê  ’        @ -0.76
+REVER C3+     H       C+      C2H                    1.00E-09  0.00   6220.2     0   Ê  ’        @ -0.54
+REVER C2H2+   CO      HCO+    C2H                    7.80E-10  0.00  10211.1     0   Ê  ’        @ -0.88
+REVER C2H3+   CO      HCO+    C2H2                   1.36E-09  0.00   6498.9     0   Ê  ’        @ -0.56
+REVER C3H3+   H2O     H3O+    C3H2                   3.00E-09  0.00  16146.6     0   Ê  ’        @ -1.39
+REVER C2H3+   NH3     CH5+    HNC                    1.00E-09  0.00   2715.8     0   Ê  ’        @ -0.23
+REVER H3+     N       NH+     H2                     2.25E-10  0.00  11856.0     0   Ê  ’        @ -1.02
+REVER NH+     H       H+      NH                     2.10E-09  0.00   1240.4     0   Ê  ’        @ -0.11
+REVER NH2+    H       H3+     N                      4.50E-20  0.00  11667.8     0   Ê  ’        @ -1.01
+REVER HCN+    H2      H3+     CN                     1.00E-09  0.00  11166.8     0   Ê  ’        @ -0.96
+REVER HNO+    H2      H3+     NO                     1.10E-09  0.00  14919.3     0   Ê  ’        @ -1.29
+REVER NH4+    H2O     H3O+    NH3                    2.20E-09  0.00  20020.3     0   Ê  ’        @ -1.73
+REVER H2CN+   OH      H3O+    CN                     4.50E-09  0.00   5508.0     0   Ê  ’        @ -0.47
+REVER NH3+    CO      HCO+    NH2                    8.90E-10  0.00  23037.9     0   Ê  ’        @ -1.99
+REVER H2CN+   CO      HCO+    HCN                    3.70E-09  0.00  15538.0     0   Ê  ’        @ -1.34
+REVER CN+     H       C+      NH                     7.80E-10  0.00  19499.7     0   Ê  ’        @ -1.68
+REVER NH3+    C       C+      NH3                    5.29E-10  0.00  12837.3     0   Ê  ’        @ -1.11
+REVER C2N+    H       C+      HCN                    3.40E-09  0.00    229.4     0   Ê  ’        @ -0.02
+REVER C2N+    H       C+      HNC                    3.40E-09  0.00   8081.4     0   Ê  ’        @ -0.70
+REVER NO+     C       C+      NO                     3.40E-09  0.00  23063.0     0   Ê  ’        @ -1.99
+REVER NH3+    O2      O2+     NH3                    2.00E-09  0.00  22233.6     0   Ê  ’        @ -1.92
+REVER HCN+    H       CH2+    N                      9.40E-10  0.00  23086.2     0   Ê  ’        @ -1.99
+REVER HCN+    H2      CH3+    N                      6.70E-11  0.00  14350.9     0   Ê  ’        @ -1.24
+REVER CH+     HCN     C2H2+   N                      2.50E-11  0.00   5352.0     0   Ê  ’        @ -0.46
+REVER C2N+    H2      C2H2+   N                      2.25E-10  0.00  10075.3     0   Ê  ’        @ -0.87
+REVER CO+     N       N+      CO                     8.25E-10  0.00   6031.1     0   Ê  ’        @ -0.52
+REVER NO+     C       N+      CO                     1.46E-10  0.00   7635.7     0   Ê  ’        @ -0.66
+REVER HNO+    N2      N2H+    NO                     3.40E-10  0.00   6116.6     0   Ê  ’        @ -0.53
+REVER CH+     NO      HNO+    C                      1.00E-09  0.00   9215.2     0   Ê  ’        @ -0.79
+REVER HCO+    NO      HNO+    CO                     1.00E-10  0.00   5452.6     0   Ê  ’        @ -0.47
+REVER H2O+    NO      HNO+    OH                     6.20E-10  0.00   5477.8     0   Ê  ’        @ -0.47
+REVER H3O+    NO      HNO+    H2O                    2.30E-09  0.00  17726.1     0   Ê  ’        @ -1.53
+REVER Fe+     NO      NO+     Fe                     1.00E-09  0.00  16262.3     0   Ê  ’        @ -1.40
+REVER HCS+    H       CS+     H2                     4.50E-10  0.00  14771.4     0   Ê  ’        @ -1.27
+REVER S+      C       C+      S                      1.50E-09  0.00  10724.2     0   Ê  ’        @ -0.92
+REVER H2S+    C       C+      H2S                    4.25E-10  0.00   9300.7     0   Ê  ’        @ -0.80
+REVER SO+     C       C+      SO                     2.60E-10  0.00  10925.4     0   Ê  ’        @ -0.94
+REVER S+      CH      CH+     S                      4.70E-10  0.00   3521.1     0   Ê  ’        @ -0.30
+REVER SH+     C       CH+     S                      4.70E-10  0.00   5442.6     0   Ê  ’        @ -0.47
+REVER OH+     CS      CH+     SO                     1.00E-09  0.00   7992.8     0   Ê  ’        @ -0.69
+REVER SH+     CH4     CH5+    S                      1.30E-09  0.00  12962.6     0   Ê  ’        @ -1.12
+REVER H3S+    H2O     H3O+    H2S                    1.90E-09  0.00   2952.7     0   Ê  ’        @ -0.25
+REVER SH+     CO      HCO+    S                      3.30E-10  0.00   9205.1     0   Ê  ’        @ -0.79
+REVER H2S+    CO      HCO+    SH                     8.20E-10  0.00  10110.5     0   Ê  ’        @ -0.87
+REVER HCS+    CO      HCO+    CS                     1.20E-09  0.00  22384.0     0   Ê  ’        @ -1.93
+REVER HSO+    CO      HCO+    SO                     7.50E-10  0.00   7897.3     0   Ê  ’        @ -0.68
+REVER H3S+    CO      HCO+    H2S                    1.60E-09  0.00  15226.1     0   Ê  ’        @ -1.31
+REVER HOCS+   CO      HCO+    OCS                    1.10E-09  0.00   4778.6     0   Ê  ’        @ -0.41
+REVER SO+     O       O2+     S                      5.40E-10  0.00  23048.0     0   Ê  ’        @ -1.99
+REVER S+      O2      O2+     S                      5.40E-10  0.00  20120.4     0   Ê  ’        @ -1.73
+REVER H2S+    O2      O2+     H2S                    1.40E-09  0.00  18696.9     0   Ê  ’        @ -1.61
+REVER NO+     S       S+      NO                     3.20E-10  0.00  12338.9     0   Ê  ’        @ -1.06
+REVER NH3+    S       S+      NH3                    1.60E-09  0.00   2113.1     0   Ê  ’        @ -0.18
+REVER SO+     O       S+      O2                     2.30E-11  0.00   2927.5     0   Ê  ’        @ -0.25
+REVER NH4+    SH      NH3+    H2S                    6.00E-10  0.00  18646.6     0   Ê  ’        @ -1.61
+REVER SH+     NO      HNO+    S                      1.10E-09  0.00  14657.7     0   Ê  ’        @ -1.26
+REVER SH+     N2      N2H+    S                      1.10E-09  0.00  20774.3     0   Ê  ’        @ -1.79
+REVER SO+     H       SH+     O                      2.90E-10  0.00  20093.3     0   Ê  ’        @ -1.73
+REVER CH2+    S       SH+     CH                     5.80E-10  0.00   8450.6     0   Ê  ’        @ -0.73
+REVER H3S+    S       SH+     H2S                    5.00E-10  0.00   6021.0     0   Ê  ’        @ -0.52
+REVER NO+     SH      SH+     NO                     3.30E-10  0.00  12741.3     0   Ê  ’        @ -1.10
+REVER NH3+    SH      SH+     NH3                    5.25E-10  0.00   2515.6     0   Ê  ’        @ -0.22
+REVER NH4+    S       SH+     NH3                    9.75E-10  0.00  23088.7     0   Ê  ’        @ -1.99
+REVER S+      H2S     H2S+    S                      1.10E-09  0.00   1423.5     0   Ê  ’        @ -0.12
+REVER NO+     H2S     H2S+    NO                     3.70E-10  0.00  13762.4     0   Ê  ’        @ -1.19
+REVER H3O+    SH      H2S+    H2O                    8.10E-10  0.00   2162.9     0   Ê  ’        @ -0.19
+REVER NH4+    SH      H2S+    NH3                    1.36E-09  0.00  22183.3     0   Ê  ’        @ -1.91
+REVER NH3+    H2S     H2S+    NH3                    3.40E-10  0.00   3536.7     0   Ê  ’        @ -0.30
+REVER NH4+    H2S     H3S+    NH3                    1.90E-09  0.00  17067.7     0   Ê  ’        @ -1.47
+REVER H2CN+   H2S     H3S+    HCN                    1.90E-09  0.00    311.9     0   Ê  ’        @ -0.03
+REVER HCO+    S       HCS+    O                      1.00E-09  0.00  19657.7     0   Ê  ’        @ -1.69
+REVER NH3+    SO      SO+     NH3                    1.30E-09  0.00   1911.9     0   Ê  ’        @ -0.16
+REVER SiH4+   H       H+      SiH4                   1.50E-09  0.00  22467.5     0   Ê  ’        @ -1.94
+REVER SiH2+   H       H3+     Si                     1.70E-09  0.00  21984.6     0   Ê  ’        @ -1.90
+REVER SiH4+   H2      H3+     SiH3                   2.00E-09  0.00  16921.3     0   Ê  ’        @ -1.46
+REVER SiH2+   H2O     H3O+    SiH                    9.70E-10  0.00   6755.4     0   Ê  ’        @ -0.58
+REVER SiH3+   H2O     H3O+    SiH2                   2.00E-09  0.00  16056.1     0   Ê  ’        @ -1.38
+REVER SiH2+   CO      HCO+    SiH                    8.70E-10  0.00  19028.9     0   Ê  ’        @ -1.64
+REVER SiH5+   CO      HCO+    SiH4                   1.40E-09  0.00   8108.5     0   Ê  ’        @ -0.70
+REVER SiO+    H       Si+     OH                     6.30E-10  0.00   6587.4     0   Ê  ’        @ -0.57
+REVER SiO+    H       SiH+    O                      4.00E-10  0.00  19942.4     0   Ê  ’        @ -1.72
+REVER NH4+    Si      SiH+    NH3                    1.00E-09  0.00   2425.0     0   Ê  ’        @ -0.21
+REVER H3O+    SiH3    SiH4+   H2O                    2.00E-09  0.00  15724.1     0   Ê  ’        @ -1.36
+REVER HCO+    SiH3    SiH4+   CO                     1.00E-09  0.00   3450.7     0   Ê  ’        @ -0.30
+REVER H3O+    SiH4    SiH5+   H2O                    2.00E-09  0.00   4164.9     0   Ê  ’        @ -0.36

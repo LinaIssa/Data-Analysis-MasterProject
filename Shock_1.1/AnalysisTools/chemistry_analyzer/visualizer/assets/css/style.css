@@ -1,0 +1,225 @@
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-size : 13px;  
+  margin-left : 0.5em; 
+  padding-left : 0.5em;
+}
+
+.centered-container{
+  margin : auto;
+  width : 1500px;
+  position : relative;
+}
+
+.pure-g > div{
+  margin-left : 5px;
+  margin-right : 5px;
+}
+
+h1{
+  font-size : 1.4em;
+  text-align : center;
+}
+
+h2{
+  font-size : 1em;
+  font-weight : bold;
+  margin : 0;
+}
+
+p{
+  margin : 0em;
+}
+
+div{
+  margin-top : 0.5em;
+  margin-bottom : 0.5em
+}
+
+fieldset{
+  margin-bottom : 0.5em;
+}
+
+select, input{
+  width : 140px;
+  padding : 1px;
+}
+
+input[type="range"]{
+  width : 130px;
+  padding : 1px;
+}
+
+input[type="checkbox"],input[type="radio"]{
+  width : 20px;
+  padding : 1px;
+}
+
+input[type="text"]{
+  width : 100px;
+  padding : 1px;
+}
+
+span.title {
+  float : left;
+  width : 50px;
+}
+
+span.value {
+  width : 55px;
+  float : left;
+}
+
+span.unit{
+  float : left;
+}
+
+label.bold {
+  font-weight : bold;
+}
+
+#spinner_area{
+  position : relative;
+  width: 100%;
+  height: 50px;
+}
+
+#interaction{
+  z-index : 1;
+  overflow : auto;
+  left : 0;
+  top : 0;
+}
+
+#interface div{
+  float : left;
+  clear : both;
+}
+#gas_conditions {
+  margin-top : 16px;
+}
+
+#graph{
+  margin-top : 13px;
+}
+
+#interface{
+  margin-top : 16px;
+}
+
+#species_network{
+  border : solid;
+  border-width: 0px;
+  border-color : #BDBDBD;
+}
+
+#infos table{
+  width : 100%;
+  margin-bottom : 2em;
+  margin-left : auto;
+  margin-right : auto;
+  border-collapse:collapse;
+  text-align : center;
+  border: 0px solid black;
+  border-color : #BDBDBD;
+  font-weight : normal;  
+}
+
+#infos table tr th{
+  padding : 2px;
+  font-weight : normal;
+}
+
+#infos table  th{
+  vertical-align : top;
+}
+
+#infos table tr td{
+  padding : 3px;
+}
+
+#plot_main_pos_var{
+	width: 160px;
+	height: 95px;
+}
+
+#plot_main_pos_var div{
+  margin : 0px;
+}
+
+#plot_main_pos_var_legend{
+	border : 0px;
+  margin : 0px;
+}
+
+#plot_main_pos_var_legend table tr,td, th{
+  border : 0px;
+}
+
+#plot_main_pos_var_legend table tbody tr td>div{
+  border : 0px !important; 
+}
+
+#plot_main_pos_var_legend td.legendLabel, td.legendColorBox{
+  padding : 0px !important; 
+}
+
+#spinner_area{
+  z-index : 10;
+  width : 100%;
+  height : 1000px;
+  left : 0;
+  top : 0;
+  position : absolute;
+  opacity : 0.5;
+  filter: alpha(opacity=50); 
+  visibility : hidden;
+}
+
+#gas_conditions div{
+  float : left;
+  clear : both;
+}
+
+.area_title{
+  text-align : center;  
+  padding-bottom : 4px;
+}
+
+.plot_container {
+	box-sizing: border-box;
+  float : left;
+	width: 208px;
+	height: 105px;
+	padding: 20px 20px 15px 5px;
+	margin: 5px auto 15px auto;
+	border: 1px solid #ddd;
+	background: #fff;
+	background: linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -o-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -ms-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -moz-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -webkit-linear-gradient(#f6f6f6 0, #fff 50px);
+	box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+	-o-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);  
+}
+
+.left_align{
+  text-align : left;
+}
+
+/* appears on top of graph when it needs to be disabled */
+.graph_disabler{
+  float: right;
+  width: 687px;
+  background-color: #e6e6e6;
+  height: 514px;
+  top: 80px;
+  position: absolute;
+  opacity: .5;
+  visibility : hidden;
+}
